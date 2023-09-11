@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "esbenp.prettier-vscode",
+        "EditorConfig.EditorConfig",
+        "WakaTime.vscode-wakatime",
+        "wayou.vscode-todo-highlight"
+    ]
+}
