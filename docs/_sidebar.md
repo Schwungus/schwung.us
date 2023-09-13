@@ -1,4 +1,4 @@
-![logo](https://schwungus.software/assets/logo_visible.png ':class=logo')
+![logo](https://schwungus.software/assets/logo.png ':class=logo')
 
 * [PNEngine](pnengine/)
   * [Assets](pnengine/assets/)
