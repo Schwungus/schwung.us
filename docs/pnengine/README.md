@@ -1,8 +1,16 @@
-# Credits
+# PNEngine
+
+PNEngine is an open source framework for GameMaker with a complete focus on the
+use of external assets and scripting.
+
+This documentation will provide information on the different types of assets as
+well as scripting through the use of the Catspeak programming language.
+
+## Credits
 
 PNEngine was created by [Can't Sleep](https://cantsleep.cc) and [nonk123](https://github.com/nonk123).
 
-## Libraries
+### Libraries
 
 PNEngine makes use of the following GameMaker libraries:
 
