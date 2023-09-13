@@ -2,6 +2,6 @@
     <img class="logo" src="https://schwungus.software/assets/logo.png"></img>
 </a>
 
-* [PNEngine](pnengine/)
-  * [Assets](pnengine/assets/)
-  * [Scripting](pnengine/scripting/)
+# PNEngine
+* [Summary](pnengine/summary.md)
+* [Assets](pnengine/assets.md)
