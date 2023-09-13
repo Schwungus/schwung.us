@@ -1,5 +1,3 @@
-* ![Schwungus Software](//assets/logo_visible.png)
-
 * **[PNEngine](pnengine/)**
   * [Credits](pnengine/credits.md)
 

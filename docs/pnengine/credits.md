@@ -1,6 +1,6 @@
 # Credits
 
-PNEngine was created by [Can't Sleep](cantsleep.cc) and [nonk123](github.com/nonk123).
+PNEngine was created by [Can't Sleep](https://cantsleep.cc) and [nonk123](https://github.com/nonk123).
 
 ## Libraries
 
