@@ -42,24 +42,33 @@ body, .anchor span, .sidebar ul li a {
 	color: rgb(210, 210, 210);
 }
 
+.markdown-section > h1 {
+	margin: 0;
+}
+
 .markdown-section > h1 span {
 	font-size: 2.5rem;
 	color: white;
 }
 
-.markdown-section h2 {
-	margin-top: 0;
+.markdown-section > h2 {
+	margin-top: 2rem;
+	margin-bottom: 0;
 	font-size: 1.75rem;
 	width: 100%;
 	text-align: left;
 	border-bottom: solid white 1px;
 }
 
-.markdown-section h3 {
-	margin-top: 0;
+.markdown-section > h3 {
+	margin: 0;
 	font-size: 1.5rem;
 }
 
+.markdown-section > h4 {
+	margin: 0;
+	font-size: 1.25rem;
+}
 
 .markdown-section a {
 	color: white;
