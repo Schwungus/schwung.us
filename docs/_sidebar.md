@@ -1,3 +1,5 @@
+![logo](https://schwungus.software/assets/logo_visible.png ':class=logo')
+
 * **[PNEngine](pnengine/)**
   * [Credits](pnengine/credits.md)
 
