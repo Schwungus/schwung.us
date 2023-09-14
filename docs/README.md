@@ -1,3 +1,3 @@
-# Welcome
+# Schwungus Software Docs
 
-Yeah, hi!
+This place holds information for all things Schwungus.

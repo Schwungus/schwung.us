@@ -1,0 +1,7 @@
+# Collisions
+
+Todo
+
+## Constants
+
+Todo
