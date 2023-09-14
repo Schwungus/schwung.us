@@ -72,7 +72,7 @@ body, .anchor span, .sidebar ul li a {
 }
 
 .markdown-section a {
-	color: white;
+	color: inherit;
 }
 
 th {
