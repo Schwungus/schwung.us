@@ -3,7 +3,7 @@
 </a>
 
 * PNEngine
-  * [Summary](pnengine/summary.md)
+* [Summary](pnengine/summary.md)
 
 ---
 
@@ -11,7 +11,7 @@
 
 ---
 
-* [**Scripting**](pnengine/scripting/)
+* [Scripting](pnengine/scripting/)
   * [Types](pnengine/scripting/types.md)
   * [Arrays](pnengine/scripting/arrays.md)
   * [Structs](pnengine/scripting/structs.md)
