@@ -6,12 +6,12 @@ Todo
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| IMAGES | `ImageMap` | An asset map containing all of the loaded images. |
-| MATERIALS | `MaterialMap` | An asset map containing all of the loaded materials. |
-| MODELS | `ModelMap` | An asset map containing all of the loaded models. |
-| FONTS | `FontMap` | An asset map containing all of the loaded fonts. |
-| SOUNDS | `SoundMap` | An asset map containing all of the loaded sounds. |
-| MUSIC | `MusicMap` | An asset map containing all of the loaded music tracks. |
+| `IMAGES` | `ImageMap` | An asset map containing all of the loaded images. |
+| `MATERIALS` | `MaterialMap` | An asset map containing all of the loaded materials. |
+| `MODELS` | `ModelMap` | An asset map containing all of the loaded models. |
+| `FONTS` | `FontMap` | An asset map containing all of the loaded fonts. |
+| `SOUNDS` | `SoundMap` | An asset map containing all of the loaded sounds. |
+| `MUSIC` | `MusicMap` | An asset map containing all of the loaded music tracks. |
 
 ## AssetMap
 
