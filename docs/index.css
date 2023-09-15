@@ -46,16 +46,16 @@ body, .markdown-section strong, .anchor span, .sidebar ul li a {
 	color: rgb(210, 210, 210);
 }
 
-.markdown-section > h1 {
+.markdown-section h1 {
 	margin: 0;
 }
 
-.markdown-section > h1 span {
+.markdown-section h1 span {
 	font-size: 2.5rem;
 	color: white;
 }
 
-.markdown-section > h2 {
+.markdown-section h2 {
 	margin-top: 2.5rem;
 	margin-bottom: 2rem;
 	font-size: 1.75rem;
@@ -64,13 +64,13 @@ body, .markdown-section strong, .anchor span, .sidebar ul li a {
 	border-bottom: solid white 1px;
 }
 
-.markdown-section > h3 {
+.markdown-section h3 {
 	margin-top: 0.5rem;
 	margin-bottom: 1rem;
 	font-size: 1.5rem;
 }
 
-.markdown-section > h4 {
+.markdown-section h4 {
 	margin: 0;
 	font-size: 1.25rem;
 }
