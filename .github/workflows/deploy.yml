@@ -1,0 +1,25 @@
+name: Deploy to schwungus.software
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          path: website
+      - name: Copy the files
+        uses: garygrossgarten/github-action-scp@release
+        with:
+          local: website
+          remote: ${{ secrets.WEBSITE_PATH }}
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          privateKey: ${{ secrets.SSH_PRIVATE_KEY }}
+          rmRemote: true
