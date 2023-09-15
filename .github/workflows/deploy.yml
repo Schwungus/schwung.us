@@ -15,7 +15,7 @@ jobs:
         with:
           path: website
       - name: Copy the files
-        uses: garygrossgarten/github-action-scp@release
+        uses: garygrossgarten/github-action-scp@v0.8.0
         with:
           local: website
           remote: ${{ secrets.WEBSITE_PATH }}
