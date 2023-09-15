@@ -57,7 +57,7 @@ body, .markdown-section strong, .anchor span, .sidebar ul li a {
 
 .markdown-section > h2 {
 	margin-top: 2.5rem;
-	margin-bottom: 0;
+	margin-bottom: 2rem;
 	font-size: 1.75rem;
 	width: 100%;
 	text-align: left;
