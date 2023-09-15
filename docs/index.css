@@ -56,18 +56,21 @@ body, .markdown-section strong, .anchor span, .sidebar ul li a {
 }
 
 .markdown-section h2 {
-	margin-top: 2.5rem;
+	margin-top: 2rem;
 	margin-bottom: 2rem;
 	font-size: 1.75rem;
 	width: 100%;
 	text-align: left;
-	border-bottom: solid white 1px;
+	border-bottom: solid 1px white;
 }
 
 .markdown-section h3 {
 	margin-top: 0.5rem;
 	margin-bottom: 1rem;
 	font-size: 1.5rem;
+	width: 100%;
+	text-align: left;
+	border-bottom: solid 1px rgba(255, 255, 255, .5);
 }
 
 .markdown-section h4 {

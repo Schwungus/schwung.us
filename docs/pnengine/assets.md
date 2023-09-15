@@ -7,7 +7,7 @@ optional JSON file that configures how the image should be displayed in-game.
 
 An image will be automatically loaded if the material that uses it gets loaded.
 
-#### Properties
+### Properties
 
 | Property | Type | Default | Description |
 | -------- | ---- | ------- | ----------- |
@@ -23,7 +23,7 @@ Materials are JSON files in the `materials` folder that define how the game shou
 
 A material will be automatically loaded if the model that uses it gets loaded.
 
-#### Properties
+### Properties
 
 | Property | Type | Default | Description |
 | -------- | ---- | ------- | ----------- |
@@ -176,7 +176,7 @@ Music tracks are always played globally with a priority value, with the highest 
 
 Music tracks are located in the `music` folder and can be OGG files with each one having an optional JSON file configuring how they're played in-game.
 
-#### Properties
+### Properties
 
 | Property | Type | Default | Description |
 | -------- | ---- | ------- | ----------- |
