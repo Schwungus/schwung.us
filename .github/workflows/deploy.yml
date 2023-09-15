@@ -15,11 +15,11 @@ jobs:
         with:
           path: website
       - name: Copy the files
-        uses: garygrossgarten/github-action-scp@v0.8.0
+        uses: appleboy/scp-action@v0.1.4
         with:
-          local: website
-          remote: ${{ secrets.WEBSITE_PATH }}
+          source: website
+          target: ${{ secrets.WEBSITE_PATH }}
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
-          privateKey: ${{ secrets.SSH_PRIVATE_KEY }}
-          rmRemote: true
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          rm: true
