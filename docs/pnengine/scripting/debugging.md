@@ -2,7 +2,9 @@
 
 Todo
 
-## print
+## Functions
+
+### print
 
 `print(value_or_format, [value]...)`
 
@@ -10,7 +12,7 @@ Todo
 
 Prints a message to the console.
 
-## show_error
+### show_error
 
 `show_error(str)`
 
@@ -18,7 +20,7 @@ Prints a message to the console.
 
 Shows an error message and closes the game.
 
-## show_caption
+### show_caption
 
 `show_caption(string, [time])`
 

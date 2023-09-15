@@ -6,21 +6,25 @@ Todo
 
 Todo
 
-## ModelInstance
+## Constructors
+
+### ModelInstance
 
 `new ModelInstance(model, [x], [y], [z], [yaw], [pitch], [roll], [scale], [x_scale], [y_scale], [z_scale])`
 
 Todo
 
-### Variables
+#### Variables
 
 Todo
 
-### Methods
+#### Methods
 
 Todo
 
-## interp
+## Functions
+
+### interp
 
 `interp(in, out, [angle], [scope])`
 
@@ -28,7 +32,7 @@ Todo
 
 Adds a Thing or struct's variable to be smoothly interpolated between ticks. If `scope` is not specified, then the default scope is the caller.
 
-## interp_skip
+### interp_skip
 
 `interp_skip(out, [scope])`
 

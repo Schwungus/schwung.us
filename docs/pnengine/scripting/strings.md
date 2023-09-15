@@ -2,7 +2,9 @@
 
 Todo
 
-## string_localize
+## Functions
+
+### string_localize
 
 `string_localize(textEntry, [substring], [...])`
 
@@ -12,7 +14,7 @@ Returns a localized version of a text pointer defined by the game's current lang
 
 The additional optional arguments replace `%s` with each and every subsequent argument.
 
-## string_rich
+### string_rich
 
 `string_rich(string, [uniqueID])`
 

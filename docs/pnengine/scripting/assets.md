@@ -13,11 +13,13 @@ Todo
 | `SOUNDS` | `SoundMap` | An asset map containing all of the loaded sounds. |
 | `MUSIC` | `MusicMap` | An asset map containing all of the loaded music tracks. |
 
-## AssetMap
+## Constructors
+
+### AssetMap
 
 Todo
 
-### Methods
+#### Methods
 
 | Name | Returns | Description |
 | ---- | ------- | ----------- |
@@ -25,13 +27,13 @@ Todo
 | `get(name)` | `Asset` or `undefined` | Tries to get an asset from the map. |
 | `clear(name)` | `N/A` | Destroys all assets in the map. |
 
-## Image
+### Image
 
 See Collage's [Image](https://tabularelf.com/docs/collage/#/0.3.0/collage-image) constructor.
 
-## Material
+### Material
 
-### Variables
+#### Variables
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
@@ -47,9 +49,9 @@ See Collage's [Image](https://tabularelf.com/docs/collage/#/0.3.0/collage-image)
 | `wind_speed` | `real` | The swaying speed of the material under the wind. |
 | `color` | `array` | The color to tint the material's texture with. The array consists of red, green, blue and alpha components as well as the BGR value. |
 
-## Model
+### Model
 
-### Variables
+#### Variables
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
@@ -63,33 +65,35 @@ See Collage's [Image](https://tabularelf.com/docs/collage/#/0.3.0/collage-image)
 | `hold_offset_y` | `real` | The Y offset of the model when held in another model's hand. |
 | `hold_offset_z` | `real` | The Z offset of the model when held in another model's hand. |
 
-## Font
+### Font
 
-### Variables
+#### Variables
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | `name` | `string` | The name of the font for use with formatting tags. |
 | `font` | `font` | The font's handle. |
 
-## Sound
+### Sound
 
-### Variables
+#### Variables
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | `pitch_high` | `real` | The highest random pitch. |
 | `pitch_low` | `real` | The lowest random pitch. |
 
-## Music
+### Music
 
-### Variables
+#### Variables
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | `metadata` | `struct` | Metadata used for special handling. |
 
-## thing_load
+## Functions
+
+### thing_load
 
 `thing_load(name)`
 

@@ -12,11 +12,17 @@ Todo
 | `RNG_GAME` | `RNGSeeds` | Gameplay-related RNG seed. **Do not use this in drawing functions!** |
 | `RNG_VISUAL` | `RNGSeeds` | RNG seed for visual effects. |
 
-## RNG
+## Constructors
+
+### RNG
+
+#### Methods
 
 Todo
 
-## point_pitch
+## Functions
+
+### point_pitch
 
 `point_pitch(x1, y1, z1, x2, y2, z2)`
 
@@ -24,7 +30,7 @@ Todo
 
 Calculates the pitch angle from points `(x1, y1, z1)` to `(x2, y2, z2)` in degrees.
 
-## matrix_transform_point
+### matrix_transform_point
 
 `matrix_transform_point(matrix, x, y, z)`
 
@@ -32,7 +38,7 @@ Calculates the pitch angle from points `(x1, y1, z1)` to `(x2, y2, z2)` in degre
 
 Transforms a vector by a matrix and returns the result in a static array.
 
-## dq_build
+### dq_build
 
 `dq_build(rad, ax, ay, az, x, y, z)`
 
@@ -40,7 +46,7 @@ Transforms a vector by a matrix and returns the result in a static array.
 
 Creates a dual quaternion from an axis angle and a translation vector.
 
-## dq_build_identity
+### dq_build_identity
 
 `dq_build_identity()`
 
@@ -48,7 +54,7 @@ Creates a dual quaternion from an axis angle and a translation vector.
 
 Creates a dual quaternion without any transformations.
 
-## dq_lerp
+### dq_lerp
 
 `dq_lerp(dq1, dq2, amount, [out])`
 

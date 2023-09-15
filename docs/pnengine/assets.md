@@ -7,7 +7,7 @@ optional JSON file that configures how the image should be displayed in-game.
 
 An image will be automatically loaded if the material that uses it gets loaded.
 
-### Properties
+#### Properties
 
 | Property | Type | Default | Description |
 | -------- | ---- | ------- | ----------- |
@@ -23,7 +23,7 @@ Materials are JSON files in the `materials` folder that define how the game shou
 
 A material will be automatically loaded if the model that uses it gets loaded.
 
-### Properties
+#### Properties
 
 | Property | Type | Default | Description |
 | -------- | ---- | ------- | ----------- |
@@ -91,7 +91,7 @@ The total size of each triangle is 48 bytes.
 | `collisions` | Array | `N/A` | See [Collision Properties](#collision-properties) |
 | `animations` | Array | `N/A` | See [Animation Properties](#animation-properties) |
 
-### Submodel Properties
+#### Submodel Properties
 
 Each submodel is defined as a struct in the `submodels` array with the following properties:
 
@@ -101,7 +101,7 @@ Each submodel is defined as a struct in the `submodels` array with the following
 | `materials` | Array | `N/A` | An array of the names of the materials the submodel can use. |
 | `hidden` | Boolean | `false` | Whether or not to hide the submodel by default. |
 
-### Collision Properties
+#### Collision Properties
 
 Each collision mesh is defined as a struct in the `collisions` array with the following properties:
 
@@ -115,7 +115,7 @@ Each collision mesh is defined as a struct in the `collisions` array with the fo
 | `collision_vision` | Boolean | `true` | Determines if this mesh is see-through. |
 | `collision_camera` | Boolean | `true` | Determines if the camera can collide with this mesh. |
 
-### Animation Properties
+#### Animation Properties
 
 Each animation is defined as a struct in the `submodels` array with the
 following properties:
@@ -162,7 +162,7 @@ Sounds can be processed in many ways. They can be played globally, in a specific
 Sounds are located in the `sounds` folder and can be 8/16-bit mono/stereo WAV
 files with each one having an optional JSON file configuring how they're played in-game.
 
-### Properties
+#### Properties
 
 | Property | Type | Default | Description |
 | -------- | ---- | ------- | ----------- |
@@ -176,7 +176,7 @@ Music tracks are always played globally with a priority value, with the highest 
 
 Music tracks are located in the `music` folder and can be OGG files with each one having an optional JSON file configuring how they're played in-game.
 
-### Properties
+#### Properties
 
 | Property | Type | Default | Description |
 | -------- | ---- | ------- | ----------- |
@@ -201,7 +201,7 @@ level itself and its contents. A level consists of one or more areas that can be
 | `icon` | String | `N/A` | The icon to display in Discord's Rich Presence. |
 | `areas` | Array | `N/A` | An array containing the structs of the level's areas. For properties, see [Area Properties](#area-properties). |
 
-### Area Properties
+#### Area Properties
 
 | Property | Type | Default | Description |
 | -------- | ---- | ------- | ----------- |
@@ -209,7 +209,7 @@ level itself and its contents. A level consists of one or more areas that can be
 | `model` | String | `N/A` | The model to use for the area. |
 | `things` | Array | `N/A` | An array containing the structs of the area's Things. For properties, see [Area Thing Properties](#area-thing-properties). |
 
-### Area Thing Properties
+#### Area Thing Properties
 
 | Property | Type | Default | Description |
 | -------- | ---- | ------- | ----------- |
