@@ -18,8 +18,9 @@ jobs:
         uses: appleboy/scp-action@v0.1.4
         with:
           source: website
+          rm: true
           strip_components: 1
-          target: ${{ secrets.WEBSITE_PATH }}
+          target: ${{ secrets.WEBSITE_PATH }}/website
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
