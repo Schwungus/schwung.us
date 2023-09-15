@@ -10,13 +10,17 @@ img.logo {
 
 /* Patches over the base theme. */
 
-body, .anchor span, .sidebar ul li a {
+body, .markdown-section strong, .anchor span, .sidebar ul li a {
 	color: white;
 }
 
 .markdown-section code {
-	background-color: rgb(190, 190, 190);
-	color: black;
+	background-color: rgb(70, 70, 70);
+	color: white;
+}
+
+.markdown-section a {
+	color: inherit;
 }
 
 .sidebar-toggle {
@@ -69,10 +73,6 @@ body, .anchor span, .sidebar ul li a {
 .markdown-section > h4 {
 	margin: 0;
 	font-size: 1.25rem;
-}
-
-.markdown-section a {
-	color: inherit;
 }
 
 th {
