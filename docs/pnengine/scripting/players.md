@@ -28,5 +28,5 @@ Todo
 | Name | Returns | Description |
 | ---- | ------- | ----------- |
 | `get_state(name)` | `any` or `undefined` | Returns the value of a state. |
-| `set_state(name)` | `bool` | Sets the value of a state. In a netgame, this will sync player states as a host (`true`), but do nothing as a client (`false`). |
+| `set_state(name, value)` | `bool` | Sets the value of a state. In a netgame, this will sync player states as a host (`true`), but do nothing as a client (`false`). |
 | `clear_states()` | `N/A` | Removes all custom states and resets to default values. |

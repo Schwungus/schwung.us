@@ -18,5 +18,5 @@ Todo
 | Name | Returns | Description |
 | ---- | ------- | ----------- |
 | `get(name)` | `any` or `undefined` | Returns the value of a flag. |
-| `set(name)` | `bool` | Sets the value of a flag. In a netgame, this will sync level flags as a host (`true`), but do nothing as a client (`false`). |
+| `set(name, value)` | `bool` | Sets the value of a flag. In a netgame, this will sync level flags as a host (`true`), but do nothing as a client (`false`). |
 | `clear()` | `N/A` | Clears all flags. |
