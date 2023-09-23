@@ -63,7 +63,7 @@ Creates an instance of a model with its own transformations and animations.
 
 **Returns:** `N/A`
 
-Adds a Thing or struct's variable to be smoothly interpolated between ticks. The output will be saved in the scope as a separate variable with the name specified in `output`. If `scope` is not specified, then the default scope is the caller.
+Adds a Thing or struct's variable to be smoothly interpolated between ticks. The output will be saved in the scope as a separate variable with the name specified in `out`. If `scope` is not specified, then the default scope is the caller.
 
 ### interp_skip
 
