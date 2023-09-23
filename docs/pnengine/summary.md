@@ -8,7 +8,7 @@ well as scripting through the use of the Catspeak programming language.
 
 ## Credits
 
-PNEngine was created by [Can't Sleep](https://cantsleep.cc) and [nonk123](https://github.com/nonk123).
+PNEngine was created by [Can't Sleep](https://cantsleep.cc) and [nonk123](https://nonk.dev).
 
 ### Libraries
 
