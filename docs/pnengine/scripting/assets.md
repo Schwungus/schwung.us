@@ -65,6 +65,12 @@ See Collage's [Image](https://tabularelf.com/docs/collage/#/0.3.0/collage-image)
 | `hold_offset_y` | `real` | The Y offset of the model when held in another model's hand. |
 | `hold_offset_z` | `real` | The Z offset of the model when held in another model's hand. |
 
+### Animation
+
+#### Variables
+
+Todo
+
 ### Font
 
 #### Variables
