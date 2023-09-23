@@ -49,9 +49,18 @@ The `Player` struct holds all the variables and methods pertaining to each playe
 
 ## Functions
 
-| Name | Returns | Description |
-| ---- | ------- | ----------- |
-| `players_ready()`* | `real` | Returns the amount of ready players. |
-| `players_active()`* | `real` | Returns the amount of active players. |
+### players_ready
 
-<sub>*Currently not exposed to scripting.</sub>
+`players_ready()`
+
+**Returns:** `real`
+
+Returns the amount of ready players. **Not implemented!**
+
+### players_active
+
+`players_active()`
+
+**Returns:** `real`
+
+Returns the amount of active players. **Not implemented!**

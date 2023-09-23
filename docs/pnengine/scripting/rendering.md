@@ -44,7 +44,7 @@ Creates an instance of a model with its own transformations and animations.
 | Name | Returns | Description |
 | ---- | ------- | ----------- |
 | `set_animation(index, [frame], [time])` | `bool` | Changes the current animation to the specified one by index while transitioning to it for `time` amount of ticks. Returns `true` on success and `false` if the index was invalid. |
-| `get_bone_dq(index)` | `array` | Returns the dual quaternion of the model's bone. If the model isn't animated or its current animation is undefined, this will either return an identity dual quaternion or the bone dual quaternion of the previous model instance that called it. |
+| `get_bone_dq(index)` | `array` | Returns the dual quaternion of the model's bone. If the model isn't animated or its current animation is undefined, this will either return an identity dual quaternion or the result from the previous model instance that called it. |
 | `rotate_bone(index, x, y, z)` | `N/A` | Rotates the bone of the model in the current frame sample. |
 | `update_sample()`* | `N/A` | Does changes to the frame sample before submitting it to the current shader. |
 | `tick()` | `N/A` | Ticks the current animation. |
