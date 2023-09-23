@@ -19,11 +19,11 @@ Creates an instance of a model with its own transformations and animations.
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | `skins` | `array` | Array containing the current skin indices of each submodel. A skin index of `-1` makes the submodel invisible. |
-| `head_bone` | `real` | See [Model](assets.md#Variables-1). |
-| `torso_bone` | `real` | See [Model](assets.md#Variables-1). |
-| `hand_bone` | `real` | See [Model](assets.md#Variables-1). |
+| `head_bone` | `real` | See [Model](scripting/assets.md#Variables-1). |
+| `torso_bone` | `real` | See [Model](scripting/assets.md#Variables-1). |
+| `hand_bone` | `real` | See [Model](scripting/assets.md#Variables-1). |
 | `animation_index` | `real` | Index of the current animation. `-1` means no animation. |
-| `animation` | `undefined` or `Animation` | [`Animation`](assets.md#Animation) struct of the current animation. `undefined` means no animation. |
+| `animation` | `undefined` or `Animation` | [`Animation`](scripting/assets.md#Animation) struct of the current animation. `undefined` means no animation. |
 | `frame`* | `real` | Frame index of the current animation. |
 | `frame_speed` | `real` | Playback multiplier of the current animation's speed. |
 | `x`* | `real` | X position of the model. |
