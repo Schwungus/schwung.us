@@ -15,6 +15,14 @@ Todo
 
 ## Constructors
 
+### Mod
+
+Todo
+
+#### Variables
+
+Todo
+
 ### AssetMap
 
 Todo
@@ -106,3 +114,11 @@ Todo
 **Returns:** `N/A`
 
 Loads a type of Thing and its assets.
+
+### mod_get
+
+`mod_get(name)`
+
+**Returns:** `Mod` or `undefined`
+
+Tries to get and return the specified Mod by its filename.
