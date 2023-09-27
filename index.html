@@ -32,6 +32,7 @@
 
 			.wavy-text {
 				margin-top: 0.5em;
+				animation: fade-in 3s
 			}
 
 			.wavy-text span {
@@ -157,6 +158,16 @@
 
 				100% {
 					transform: translateY(0em);
+				}
+			}
+			
+			@keyframes fade-in {
+				0% {
+					opacity: 0;
+				}
+				
+				100% {
+					opacity: 1;
 				}
 			}
 		</style>
