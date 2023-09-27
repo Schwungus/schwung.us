@@ -9,7 +9,7 @@ Todo
 | `PI` | `real` | The value of pi. |
 | `EPSILON` | `real` | The epsilon value. |
 | `RNG` | `RNG` | A constructor containing methods for pseudo-random number generation. |
-| `RNG_GAME` | `RNGSeeds` | Gameplay-related RNG seed. **Do not use this in drawing functions!** |
+| `RNG_GAME` | `RNGSeeds` | Gameplay-related RNG seed. **Do not use this in non-deterministic functions!** |
 | `RNG_VISUAL` | `RNGSeeds` | RNG seed for visual effects. |
 
 ## Constructors

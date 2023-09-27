@@ -4,9 +4,80 @@ Todo
 
 ## Constants
 
-Todo
+### Font Alignment
+
+| Name | Type |
+| ---- | ---- |
+| `FA_LEFT` | `Constant.HAlign` |
+| `FA_CENTER` | `Constant.HAlign` |
+| `FA_RIGHT` | `Constant.HAlign` |
+| `FA_TOP` | `Constant.VAlign` |
+| `FA_MIDDLE` | `Constant.VAlign` |
+| `FA_BOTTOM` | `Constant.VAlign` |
+
+### Shaders
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| `SH_WORLD` | `Shader` | Basic shader for rendering a level. |
+| `SH_SKY` | `Shader` | Basic shader for rendering a Sky. |
+| `SH_BLOOM` | `Shader` | Post-processing shader for bloom. |
+| `SH_CURVE` | `Shader` | Post-processing shader for drawing a curved screen with a stereoscopic 3D effect. |
+
+### Particle Data
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| `PART_DEAD` | `ParticleData` -> `bool` | Whether or not the particle is valid. |
+| `PART_IMAGE` | `ParticleData` -> `undefined` or `Image` | |
+| `PART_FRAME` | `ParticleData` -> `real` | |
+| `PART_FRAME` | `ParticleData` -> `real` | |
+| `PART_ANIMATION` | `ParticleData` -> `ParticleAnimationType` | Determines how the particle should be animated. See [Particle Animation](#particle-animation). |
+| `PART_WIDTH` | `ParticleData` -> `real` | |
+| `PART_HEIGHT` | `ParticleData` -> `real` | |
+| `PART_WIDTH_SPEED` | `ParticleData` -> `real` | The shrinking/growing speed of the particle's width. |
+| `PART_HEIGHT_SPEED` | `ParticleData` -> `real` | The shrinking/growing speed of the particle's height. |
+| `PART_ANGLE` | `ParticleData` -> `real` | |
+| `PART_ANGLE_SPEED` | `ParticleData` -> `real` | |
+| `PART_COLOR` | `ParticleData` -> `Constant.Color` | |
+| `PART_ALPHA` | `ParticleData` -> `real` | |
+| `PART_ALPHA_SPEED` | `ParticleData` -> `real` | |
+| `PART_BRIGHT` | `ParticleData` -> `real` | How much the particle is unaffected by lighting. |
+| `PART_BRIGHT_SPEED` | `ParticleData` -> `real` | The decreasing/growing speed of the particle's brightness. |
+| `PART_TICKS` | `ParticleData` -> `real` | How many ticks the particle lasts before dying. |
+| `PART_X` | `ParticleData` -> `real` | |
+| `PART_Y` | `ParticleData` -> `real` | |
+| `PART_Z` | `ParticleData` -> `real` | |
+| `PART_FLOOR_Z` | `ParticleData` -> `real` | |
+| `PART_CEILING_Z` | `ParticleData` -> `real` | |
+| `PART_X_SPEED` | `ParticleData` -> `real` | |
+| `PART_Y_SPEED` | `ParticleData` -> `real` | |
+| `PART_Z_SPEED` | `ParticleData` -> `real` | |
+| `PART_X_FRICTION` | `ParticleData` -> `real` | |
+| `PART_Y_FRICTION` | `ParticleData` -> `real` | |
+| `PART_Z_FRICTION` | `ParticleData` -> `real` | |
+| `PART_GRAVITY` | `ParticleData` -> `real` | |
+| `PART_MAX_FLY_SPEED` | `ParticleData` -> `real` | |
+| `PART_MAX_FALL_SPEED` | `ParticleData` -> `real` | |
+
+### Particle Animation
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| `PANI_PLAY` | `ParticleAnimations` | Plays its animation and dies after the last frame. |
+| `PANI_PLAY_STAY` | `ParticleAnimations` | Plays its animation and stays on the last frame. |
+| `PANI_LOOP` | `ParticleAnimations` | Loops its animation. |
 
 ## Constructors
+
+### Shader
+
+#### Methods
+
+| Name | Returns | Description |
+| ---- | ------- | ----------- |
+| `set()` | `N/A` | Sets this shader as the current one for drawing. |
+| `set_uniform(name, values...)` | `bool` | Sets a uniform with the specified value(s). |
 
 ### ModelInstance
 
@@ -72,3 +143,15 @@ Adds a Thing or struct's variable to be smoothly interpolated between ticks. The
 **Returns:** `bool`
 
 Skips interpolation for a given variable for a single tick. If `scope` is not specified, then the default scope is the caller.
+
+### shader_current
+
+`shader_current()`
+
+**Returns:** `Shader` or `undefined`
+
+Returns the shader that is currently being used to draw with.
+
+## GameMaker Functions
+
+- [`shader_reset()`](https://manual.yoyogames.com/GameMaker_Language/GML_Reference/Asset_Management/Shaders/shader_reset.htm)

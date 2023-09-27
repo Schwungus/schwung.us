@@ -1,8 +1,26 @@
 # Debugging
 
-Todo
-
 ## Functions
+
+### current_time
+
+`current_time()`
+
+**Returns:** `real`
+
+Returns the number of milliseconds that have passed since the game was started.
+
+This function is **non-deterministic** and may break demo playback if used in gameplay.
+
+### get_timer
+
+`get_timer()`
+
+**Returns:** `real`
+
+Returns the number of microseconds that have passed since the game was started. This function is asynchronous, so calling it multiple times in a function will never return the same value, which is useful for debugging and benchmarking.
+
+This function is **non-deterministic** and may break demo playback if used in gameplay.
 
 ### print
 

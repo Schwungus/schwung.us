@@ -8,13 +8,10 @@ In order to play multiplayers, up to 3 other players may join locally by using a
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| `MAX_PLAYERS`* | `real` | The maximum amount of players the game can handle in a session. |
-| `PLAYERS`* | `array` | An array containing all 4 [`Player`](#Player) structs. |
-| `PS_INACTIVE`* | `PlayerStatus` | The player is inactive and not in-game. |
-| `PS_READY`* | `PlayerStatus` | The player is active but won't be in-game until the current level changes. |
-| `PS_ACTIVE`* | `PlayerStatus` | The player is active and in-game. |
-
-<sub>*Currently not exposed to scripting.</sub>
+| `MAX_PLAYERS` | `real` | The maximum amount of players the game can handle in a session. |
+| `PS_INACTIVE` | `PlayerStatus` | The player is inactive and not in-game. |
+| `PS_READY` | `PlayerStatus` | The player is active but won't be in-game until the current level changes. |
+| `PS_ACTIVE` | `PlayerStatus` | The player is active and in-game. |
 
 ## Constructors
 
@@ -45,9 +42,17 @@ The `Player` struct holds all the variables and methods pertaining to each playe
 | `set_state(name, value)`* | `bool` | Sets the value of a state. In a netgame, this will sync player states as a host (`true`), but do nothing as a client (`false`). |
 | `clear_states()` | `N/A` | Removes all custom states and resets to default values. |
 
-<sub>*This method can also be accessed through the player's pawn.</sub>
+<sub>*Can also be accessed directly through `PlayerPawn`.</sub>
 
 ## Functions
+
+### player_get
+
+`player_get(index)`
+
+**Returns:** `Player`
+
+Returns a player with the specified index.
 
 ### players_ready
 
@@ -55,7 +60,7 @@ The `Player` struct holds all the variables and methods pertaining to each playe
 
 **Returns:** `real`
 
-Returns the amount of ready players. **Not implemented!**
+Returns the amount of ready players.
 
 ### players_active
 
@@ -63,4 +68,4 @@ Returns the amount of ready players. **Not implemented!**
 
 **Returns:** `real`
 
-Returns the amount of active players. **Not implemented!**
+Returns the amount of active players.
