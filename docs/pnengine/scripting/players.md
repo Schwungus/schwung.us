@@ -2,7 +2,7 @@
 
 Players are avatars of users playing a game. They can directly pass inputs to their `PlayerPawn`, a user-controlled Thing, in order to interact with the game world. As such, demos and netgames record player input as they are the only non-deterministic part of the game.
 
-In order to play multiplayers, up to 3 other players may join locally by using a separate controller, or online through a netgame.
+In order to play multiplayer, up to 3 other players may join locally by using a separate controller, or online through a netgame.
 
 ## Constants
 
