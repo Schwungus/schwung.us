@@ -17,7 +17,7 @@ jobs:
       - name: Render SASS
         uses: gha-utilities/sass-build@v0.5.1
         with:
-          source: index.scss
+          source: website/index.scss
           destination: website/assets/index.css
       - name: Copy the files
         uses: appleboy/scp-action@v0.1.4
