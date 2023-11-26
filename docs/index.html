@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Schwungus Software Docs</title>
 
-		{{import "/include/head.html"}}
-		{{template "head"}}
+<head>
+    <title>Schwungus Software Docs</title>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <link rel="stylesheet" href="/assets/index.css">
+    <script async src="https://umami.schwungus.software/script.js"
+        data-website-id="583fb709-3539-4f6c-b271-b18ccb086f29">
+        </script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4.13.1/themes/vue.css" />
+    <link rel="stylesheet" href="index.css">
+</head>
 
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-		<meta name="viewport" content="width=device-width,initial-scale=1" />
-		<link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
-		<link rel="stylesheet"
-		      href="https://cdn.jsdelivr.net/npm/docsify@4.13.1/themes/vue.css" />
-		<link rel="stylesheet" href="index.css">
-	</head>
-	<body>
-		<div id="app"></div>
-		<script>
-			window.$docsify = {
-				relativePaths: true,
-				routerMode: "hash",
-				loadSidebar: true,
-				notFoundPage: true,
-				subMaxLevel: 3,
-			}
-		</script>
-		<script src="https://cdn.jsdelivr.net/npm/docsify@4.13.1"></script>
-	</body>
+<body>
+    <div id="app"></div>
+    <script>
+        window.$docsify = {
+            relativePaths: true,
+            routerMode: "hash",
+            loadSidebar: true,
+            notFoundPage: true,
+            subMaxLevel: 3,
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4.13.1"></script>
+</body>
+
 </html>

@@ -3,17 +3,22 @@ name: Deploy to schwungus.software
 on:
   push:
     branches:
-      - main
+      - deploy
 
 jobs:
   deploy:
-    name: Deploy
+    name: Deploy to schwungus.software
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           path: website
+      - name: Render SASS
+        uses: gha-utilities/sass-build@v0.5.1
+        with:
+          source: index.scss
+          destination: website/assets/index.css
       - name: Copy the files
         uses: appleboy/scp-action@v0.1.4
         with:
