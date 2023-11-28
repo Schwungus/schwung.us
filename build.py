@@ -21,8 +21,11 @@ def sass(inf, outf):
     with open(os.path.join(outf), "w") as f:
         print(out, file=f, flush=True)
 
-def build(html):
-    out = jn_env.get_template(html).render()
+def build(j2):
+    out = jn_env.get_template(j2).render()
+
+    base_name = os.path.splitext(j2)[0]
+    html = base_name + ".html"
 
     with open(os.path.join(OUT_DIR, html), "w") as f:
         print(out, file=f, flush=True)
@@ -37,9 +40,9 @@ def main():
     shutil.copytree("docs", os.path.join(OUT_DIR, "docs"))
     shutil.copy("static/robots.txt", OUT_DIR)
 
-    build("index.html")
-    build("demos.html")
-    build("hunk.html")
+    build("index.j2")
+    build("demos.j2")
+    build("hunk.j2")
 
 if __name__ == "__main__":
     try:
