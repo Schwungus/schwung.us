@@ -204,3 +204,17 @@ footer {
         }
     }
 }
+
+.wait-for-icons * {
+    color: $bg1;
+}
+
+.fontawesome-i2svg-complete .wait-for-icons * {
+    animation: fade-in-icons 2s ease-out forwards;
+}
+
+@keyframes fade-in-icons {
+    100% {
+        color: $fg;
+    }
+}
