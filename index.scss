@@ -25,6 +25,11 @@ h1 {
     font-weight: 600;
 }
 
+h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
 main {
     height: 100vh;
 
@@ -110,8 +115,21 @@ footer {
     flex-flow: row wrap;
     gap: 1em;
 
-    > div img {
-        max-width: 256px;
-        height: auto;
+    > div {
+        display: flex;
+        flex-flow: column nowrap;
+
+        > a {
+            order: 10;
+        }
+
+        img {
+            max-width: 256px;
+            height: auto;
+        }
+
+        > h2 {
+            order: 20;
+        }
     }
 }

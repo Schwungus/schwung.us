@@ -1,23 +1,17 @@
-<!DOCTYPE html>
-<html>
+{% extends "base.html" %}
 
-<head>
-    <meta charset="utf-8">
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-    <link rel="stylesheet" href="/assets/index.css">
-    <script async src="https://umami.schwungus.software/script.js"
-        data-website-id="583fb709-3539-4f6c-b271-b18ccb086f29">
-        </script>
-    <title>Demos | Schwungus Software</title>
-</head>
+{% block title %}Demos{% endblock %}
 
-<body>
-    <main>
-        <h1>Our demos</h1>
-        <div id="demos"></div>
-        <script src="/js/demos.js"></script>
-    </main>
-    <footer><a href="/">Go back</a></footer>
-</body>
-
-</html>
+{% block main %}
+    <h1>Our demos</h1>
+    <div id="demos">
+        {% for name, img, href in [("Bombswab", "/assets/bombswab.png", "https://bombswab.schwungus.software")] %}
+            <div>
+                <h2>{{ name }}</h2>
+                <a href={{ href }}>
+                    <img src={{ img }} alt={{ name }}>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
