@@ -14,16 +14,15 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: deploy
-          path: website
       - name: Render SASS
         uses: gha-utilities/sass-build@v0.5.1
         with:
-          source: website/index.scss
-          destination: website/assets/index.css
+          source: ${{ github.workspace }}/index.scss
+          destination: ${{ github.workspace }}/assets/index.css
       - name: Copy the files
         uses: appleboy/scp-action@v0.1.4
         with:
-          source: website
+          source: ${{ github.workspace }}
           rm: true
           strip_components: 1
           target: ${{ secrets.WEBSITE_PATH }}/website
