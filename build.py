@@ -11,7 +11,7 @@ import sass as libsass # deprecated, but better than nothing
 OUT_DIR = "out"
 
 jn_env = jinja2.Environment(
-    loader=jinja2.FileSystemLoader(".", "utf-8"),
+    loader=jinja2.FileSystemLoader("pages", "utf-8"),
     autoescape=True,
 )
 
@@ -28,14 +28,14 @@ def build(html):
         print(out, file=f, flush=True)
 
 def main():
-    sass("index.scss", "assets/index.css")
+    sass("pages/index.scss", "assets/index.css")
 
     if os.path.exists(OUT_DIR):
         shutil.rmtree(OUT_DIR)
 
     shutil.copytree("assets", os.path.join(OUT_DIR, "assets"))
     shutil.copytree("docs", os.path.join(OUT_DIR, "docs"))
-    shutil.copy("robots.txt", OUT_DIR)
+    shutil.copy("static/robots.txt", OUT_DIR)
 
     build("index.html")
     build("demos.html")
