@@ -99,7 +99,7 @@ main {
 
         @for $i from 1 through 18 {
             &:nth-of-type(#{$i}) {
-	            animation-delay: #{calc(($i - 1) / 10.0)}s;
+	            animation-delay: #{($i - 1) / 10.0}s;
             }
         }
     }
