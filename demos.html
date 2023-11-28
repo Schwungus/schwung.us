@@ -6,12 +6,12 @@
     <h1>Our demos</h1>
     <div id="demos">
         {% for name, img, href in [("Bombswab", "/assets/bombswab.png", "https://bombswab.schwungus.software")] %}
-            <div>
-                <h2>{{ name }}</h2>
-                <a href={{ href }}>
+            <a href={{ href }}>
+                <div>
+                    <h2>{{ name }}</h2>
                     <img src={{ img }} alt={{ name }}>
-                </a>
-            </div>
+                </div>
+            </a>
         {% endfor %}
     </div>
 {% endblock %}

@@ -1,19 +1,36 @@
+$mobile-width: 640px;
+
+@mixin mobile {
+    @media only screen and (max-width: $mobile-width) {
+        @content
+    }
+}
+
 html, body {
     padding: 0;
     margin: 0;
 }
 
-body {
-    background-color: rgb(128, 128, 128);
+$bg: rgb(128, 128, 128);
+$bg1:  rgb(80, 80, 80);
+$bg2: rgb(111, 111, 111);
+
+$fg: rgb(222, 222, 222);
+
+html {
+    background-color: $bg;
+    color: $fg;
 
     font-family: Calibri;
-    font-size: 1.2vmax;
+    font-size: min(18px, 1.2vmax);
 
-    color: rgb(222, 222, 222);
+    @include mobile {
+        font-size: max(16px, 3vmin);
+    }
 }
 
 a {
-    $c:  rgb(255, 255, 255);
+    $c: rgb(255, 255, 255);
 
     color: $c;
     text-decoration: underline;
@@ -30,18 +47,29 @@ h2 {
     font-weight: 500;
 }
 
-main {
+body {
     height: 100vh;
+
+	display: flex;
+    flex-flow: column nowrap;
+
+	align-items: center;
+	justify-content: space-between;
+	text-align: center;
+
+	overflow-y: auto;
+}
+
+main {
+    flex: 1 1;
 
 	display: flex;
     flex-flow: column nowrap;
     gap: 1em;
 
 	align-items: center;
-	justify-content: center;
+	justify-content: space-evenly;
 	text-align: center;
-
-	overflow-y: auto;
 }
 
 #logo {
@@ -100,15 +128,21 @@ main {
 	}
 }
 
-header {
-    position: absolute;
-    top: 0;
+#check-out {
+    padding: 1em;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 0.7em;
 
+    background: $bg2;
+}
+
+header {
     width: 100vw;
-    font-size: 1.5rem;
 
     padding: 1em;
     box-sizing: border-box;
+
+    font-size: 1.5rem;
 
     display: flex;
     flex-direction: row nowrap;
@@ -120,13 +154,18 @@ header {
 }
 
 footer {
-    position: absolute;
-    bottom: 1em;
-
     width: 100vw;
+
+    padding: 1em;
+    box-sizing: border-box;
+
     text-align: center;
 
     font-size: 0.8rem;
+}
+
+header, footer {
+    background: $bg1;
 }
 
 #demos {
@@ -134,20 +173,28 @@ footer {
     flex-flow: row wrap;
     gap: 1em;
 
-    > div {
+    > a {
+        text-decoration: none;
+    }
+
+    div {
         display: flex;
         flex-flow: column nowrap;
 
-        > a {
-            order: 10;
-        }
+        padding: 1em;
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 0.7em;
+
+        background: $bg2;
 
         img {
             max-width: 256px;
             height: auto;
+            order: 10;
         }
 
         > h2 {
+            margin: 0;
             order: 20;
         }
     }
