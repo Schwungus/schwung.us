@@ -1,7 +1,5 @@
 # Arrays
 
-Todo
-
 ## GameMaker Functions
 
 * [`array_create(size, [value])`](https://manual.yoyogames.com/GameMaker_Language/GML_Reference/Variable_Functions/array_create.htm)
