@@ -91,15 +91,19 @@ main {
     text-align: center;
 
     > span {
-	    display: inline-block;
-	    margin-right: 0.1em;
-	    animation: wavy 2s ease-in-out infinite;
+        $len: 18;
+
+        font-size: #{100 / ($len + 1)}vmin;
+
+        display: inline-block;
+        margin-right: 0.1em;
+        animation: wavy 2s ease-in-out infinite;
 
         &.space {
             margin-left: 1ex;
         }
 
-        @for $i from 1 through 18 {
+        @for $i from 1 through $len {
             &:nth-of-type(#{$i}) {
 	            animation-delay: #{($i - 1) / 10.0}s;
             }
