@@ -7,9 +7,22 @@ body {
     background-color: rgb(128, 128, 128);
 
     font-family: Calibri;
-    font-size: 1.5vmax;
+    font-size: 1.2vmax;
 
-    color: rgb(255, 255, 255);
+    color: rgb(222, 222, 222);
+}
+
+a {
+    $c:  rgb(255, 255, 255);
+
+    color: $c;
+    text-decoration: underline;
+    text-decoration-color: $c;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
 }
 
 main {
@@ -26,7 +39,7 @@ main {
 	overflow-y: auto;
 }
 
-img#logo {
+#logo {
 	width: 45vmax;
 	display: block;
 
@@ -36,7 +49,7 @@ img#logo {
 	text-align: center;
 }
 
-div#wavy-text {
+#wavy-text {
 	margin-top: 0.5em;
 	animation: fade-in 3s;
     text-align: center;
@@ -89,5 +102,16 @@ footer {
     width: 100vw;
     text-align: center;
 
-    font-size: 0.6em;
+    font-size: 0.8rem;
+}
+
+#demos {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1em;
+
+    > div img {
+        max-width: 256px;
+        height: auto;
+    }
 }
