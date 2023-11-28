@@ -96,7 +96,7 @@ main {
         font-size: #{100 / ($len + 1)}vmin;
 
         display: inline-block;
-        margin-right: 0.1em;
+        margin-right: 1px;
         animation: wavy 2s ease-in-out infinite;
 
         &.space {
