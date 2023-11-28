@@ -3,44 +3,58 @@ html, body {
     margin: 0;
 }
 
-.page {
-	height: 100vh;
+body {
+    background-color: rgb(128, 128, 128);
+
+    font-family: Calibri;
+    font-size: 1.5vmax;
+
+    color: rgb(255, 255, 255);
+}
+
+main {
+    height: 100vh;
+
 	display: flex;
-    flex-direction: column;
+    flex-flow: column nowrap;
+    gap: 1em;
+
 	align-items: center;
 	justify-content: center;
-	overflow-y: auto;
-	font-size: 1.5vmax;
 	text-align: center;
+
+	overflow-y: auto;
 }
 
-.page-items {
-	min-height: 0;
-}
-
-img.logo {
+img#logo {
 	width: 45vmax;
 	display: block;
+
 	margin: 0 auto;
 	padding: 0;
+
 	text-align: center;
 }
 
-.wavy-text {
+div#wavy-text {
 	margin-top: 0.5em;
-	animation: fade-in 3s
-}
+	animation: fade-in 3s;
+    text-align: center;
 
-.wavy-text span {
-	display: inline-block;
-	margin-left: -0.1em;
-	margin-right: -0.1em;
-	animation: wavy 2s ease-in-out infinite;
-}
+    > span {
+	    display: inline-block;
+	    margin-right: 0.1em;
+	    animation: wavy 2s ease-in-out infinite;
 
-@for $i from 1 through 18 {
-    .wavy-text span:nth-of-type(#{$i}) {
-	    animation-delay: #{calc(($i - 1) / 10.0)}s;
+        &.space {
+            margin-left: 1ex;
+        }
+
+        @for $i from 1 through 18 {
+            &:nth-of-type(#{$i}) {
+	            animation-delay: #{calc(($i - 1) / 10.0)}s;
+            }
+        }
     }
 }
 
@@ -68,6 +82,12 @@ img.logo {
 	}
 }
 
-sub.ultra {
-    font-size: 44%;
+footer {
+    position: absolute;
+    bottom: 1em;
+
+    width: 100vw;
+    text-align: center;
+
+    font-size: 0.6em;
 }
