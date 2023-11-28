@@ -1,3 +1,9 @@
+$bg: rgb(128, 128, 128);
+$bg1:  rgb(80, 80, 80);
+$bg2: rgb(111, 111, 111);
+
+$fg: rgb(222, 222, 222);
+
 $mobile-width: 640px;
 
 @mixin mobile {
@@ -9,17 +15,12 @@ $mobile-width: 640px;
 html, body {
     padding: 0;
     margin: 0;
+
     z-index: -100;
 }
 
-$bg: rgb(128, 128, 128);
-$bg1:  rgb(80, 80, 80);
-$bg2: rgb(111, 111, 111);
-
-$fg: rgb(222, 222, 222);
-
 html {
-    background-color: $bg;
+    background: $bg;
     color: $fg;
 
     font-family: Calibri;
@@ -49,6 +50,7 @@ h2 {
 }
 
 body {
+    background: $bg;
     height: 100vh;
 
 	display: flex;
@@ -89,15 +91,19 @@ main {
     text-align: center;
 
     > span {
-	    display: inline-block;
-	    margin-right: 0.1em;
-	    animation: wavy 2s ease-in-out infinite;
+        $len: 18;
+
+        font-size: #{100 / ($len + 1)}vmin;
+
+        display: inline-block;
+        margin-right: 0.1em;
+        animation: wavy 2s ease-in-out infinite;
 
         &.space {
             margin-left: 1ex;
         }
 
-        @for $i from 1 through 18 {
+        @for $i from 1 through $len {
             &:nth-of-type(#{$i}) {
 	            animation-delay: #{($i - 1) / 10.0}s;
             }
@@ -138,6 +144,7 @@ main {
 }
 
 header {
+    background: $bg1;
     width: 100vw;
 
     padding: 1em;
@@ -155,6 +162,7 @@ header {
 }
 
 footer {
+    background: $bg1;
     width: 100vw;
 
     padding: 1em;
@@ -163,10 +171,6 @@ footer {
     text-align: center;
 
     font-size: 0.8rem;
-}
-
-header, footer {
-    background: $bg1;
 }
 
 #demos {
@@ -198,5 +202,19 @@ header, footer {
             margin: 0;
             order: 20;
         }
+    }
+}
+
+.wait-for-icons * {
+    color: $bg1;
+}
+
+.fontawesome-i2svg-complete .wait-for-icons * {
+    animation: fade-in-icons 2s ease-out forwards;
+}
+
+@keyframes fade-in-icons {
+    100% {
+        color: $fg;
     }
 }

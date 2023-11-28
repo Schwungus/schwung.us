@@ -1,3 +1,11 @@
+/* Undo hacks from the main index.css. */
+
+body, html, main {
+    background: rgb(111, 111, 111);
+    height: max-content;
+    text-align: left;
+}
+
 /* Proper logo display. */
 
 img.logo {
