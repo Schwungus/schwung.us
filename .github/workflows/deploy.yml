@@ -2,8 +2,8 @@ name: Deploy to schwungus.software
 
 on:
   push:
-    branches:
-      - deploy
+    branches: ["deploy"]
+  workflow_dispatch:
 
 jobs:
   deploy:
