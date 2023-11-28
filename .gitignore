@@ -1,5 +1,6 @@
 /.vscode
 /out
+/venv
 
 assets/index.css
 assets/index.css.map

@@ -13,15 +13,17 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt update
-          sudo apt install bash nodejs npm j2cli
-          sudo npm -g install sass
+          sudo apt install python3 python3-venv python3-pip
       - name: Checkout
         uses: actions/checkout@v4
         with:
           ref: deploy
       - name: Build
         run: |
-          ./build.sh
+          python3 -m venv venv
+          source venv/bin/activate
+          pip install -r requirements.txt
+          ./build.py
       - name: Copy the files
         uses: appleboy/scp-action@v0.1.4
         with:
