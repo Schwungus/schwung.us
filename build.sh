@@ -15,6 +15,8 @@ function build() {
 
 sass index.scss assets/index.css
 
+copy robots.txt
+
 copy assets
 copy docs
 
