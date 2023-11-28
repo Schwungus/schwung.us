@@ -10,19 +10,22 @@ jobs:
     name: Deploy to schwungus.software
     runs-on: ubuntu-latest
     steps:
+      - name: Install dependencies
+        run: |
+          sudo apt update
+          sudo apt install bash nodejs npm j2cli
+          sudo npm -g install sass
       - name: Checkout
         uses: actions/checkout@v4
         with:
           ref: deploy
-      - name: Render SASS
-        uses: gha-utilities/sass-build@v0.5.1
-        with:
-          source: ${{ github.workspace }}/index.scss
-          destination: ${{ github.workspace }}/assets/index.css
+      - name: Build
+        run: |
+          ./build.sh
       - name: Copy the files
         uses: appleboy/scp-action@v0.1.4
         with:
-          source: ${{ github.workspace }}
+          source: ${{ github.workspace }}/out
           rm: true
           strip_components: 1
           target: ${{ secrets.WEBSITE_PATH }}/website
