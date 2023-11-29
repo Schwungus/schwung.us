@@ -5,7 +5,8 @@
 {% block main %}
     <h1>Our demos</h1>
     <div id="demos">
-        {% for name, img, href in [("Bombswab", "/assets/bombswab.png", "https://bombswab.schwungus.software")] %}
+        {% for name, img, href in
+            [("Bombswab", "/assets/bombswab.png", "https://bombswab.schwungus.software")] %}
             <a href={{ href }}>
                 <div>
                     <h2>{{ name }}</h2>
