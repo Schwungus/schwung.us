@@ -87,7 +87,7 @@ main {
 
 #wavy-text {
 	margin-top: 0.5em;
-	animation: fade-in 3s;
+	animation: fade-in 3s forwards;
     text-align: center;
 
     > span {
@@ -122,16 +122,6 @@ main {
 
 	100% {
 		transform: translateY(0em);
-	}
-}
-
-@keyframes fade-in {
-	0% {
-		opacity: 0;
-	}
-
-	100% {
-		opacity: 1;
 	}
 }
 
@@ -205,16 +195,20 @@ footer {
     }
 }
 
-.wait-for-icons * {
-    color: $bg1;
+.wait-for-icons {
+    opacity: 0;
 }
 
-.fontawesome-i2svg-complete .wait-for-icons * {
-    animation: fade-in-icons 2s ease-out forwards;
+.fontawesome-i2svg-complete .wait-for-icons {
+    animation: fade-in 2s forwards;
 }
 
-@keyframes fade-in-icons {
-    100% {
-        color: $fg;
-    }
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
 }
