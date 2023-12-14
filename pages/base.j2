@@ -18,7 +18,8 @@
 <body>
     <header>
         {% block header %}
-            {% for icon, name, href in [("fa-brands fa-github", "GitHub", "https://github.com/Schwungus-Software")] %}
+            {% for icon, name, href in
+                [("fa-brands fa-github", "GitHub", "https://github.com/Schwungus-Software")] %}
                 <div class="wait-for-icons">
                     <a href={{ href }}>
                         <i class="{{ icon }}"></i>
