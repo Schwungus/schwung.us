@@ -41,6 +41,7 @@ The `Player` struct holds all the variables and methods pertaining to each playe
 | `get_state(name)`* | `any` or `undefined` | Returns the value of a state. |
 | `set_state(name, value)`* | `bool` | Sets the value of a state. In a netgame, this will sync player states as a host (`true`), but do nothing as a client (`false`). |
 | `clear_states()` | `N/A` | Removes all custom states and resets to default values. |
+| `is_local()` | `bool` | Returns `true` if the player is local, `false` otherwise. |
 
 <sub>*Can also be accessed directly through `PlayerPawn`.</sub>
 
