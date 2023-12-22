@@ -2,16 +2,24 @@
 
 The website for all things Schwungus.
 
-## Development
+## Development (Windows)
 
-(Re-)do this every time you change something:
+Install dependencies:
 
 ```bash
-python build.py
+py -m pip install -r requirements.txt
+```
+
+Rebuild every time you change something:
+
+```bash
+py build.py
 ```
 
 Run this once inside the `out` directory:
 
 ```bash
-python -m http.server 8080
+py -m http.server 8080
 ```
+
+And navigate to <http://localhost:8080>.
