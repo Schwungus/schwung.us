@@ -2,11 +2,11 @@
 
 """A small, hopefully cross-platform script for generating static website data from Jinja and SCSS sources."""
 
-import shutil
 import os.path
+import shutil
 
 import jinja2
-import sass as libsass # deprecated, but better than nothing
+import sass as libsass  # deprecated, but better than nothing
 
 OUT_DIR = "out"
 
@@ -37,7 +37,6 @@ def main():
         shutil.rmtree(OUT_DIR)
 
     shutil.copytree("assets", os.path.join(OUT_DIR, "assets"))
-    shutil.copytree("docs", os.path.join(OUT_DIR, "docs"))
     shutil.copy("static/robots.txt", OUT_DIR)
 
     build("index.j2")
