@@ -2,7 +2,7 @@ $bg: rgb(128, 128, 128);
 $bg1:  rgb(80, 80, 80);
 $bg2: rgb(111, 111, 111);
 
-$fg: rgb(222, 222, 222);
+$fg: rgb(230, 230, 230);
 
 $mobile-width: 640px;
 
@@ -10,6 +10,10 @@ $mobile-width: 640px;
     @media only screen and (max-width: $mobile-width) {
         @content
     }
+}
+
+@font-face {
+    font-family: Stilu; src: url('Stilu-Regular.otf');
 }
 
 html, body {
@@ -24,7 +28,8 @@ html {
     color: $fg;
 
     font-family: Calibri;
-    font-size: 18px;
+    font-family: Stilu;
+    font-size: 16px;
 
     @include mobile {
         font-size: 16px;
@@ -51,6 +56,10 @@ h2 {
 
 body {
     background: $bg;
+    background-image: url('background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 100vh;
 
 	display: flex;
@@ -78,6 +87,17 @@ main {
 #logo {
 	width: 45vmax;
 	display: block;
+
+	margin: 0 auto;
+	padding: 0;
+
+	text-align: center;
+}
+
+#small-logo {
+    // I DON'T KNOW HOW TO INHERIT THINGS
+    width: 8vmax;
+    @display: block;
 
 	margin: 0 auto;
 	padding: 0;
@@ -127,14 +147,13 @@ main {
 
 #check-out {
     padding: 1em;
-    border: 1px solid rgb(255, 255, 255);
-    border-radius: 0.7em;
+    border: 1px solid #fff;
+    border: 1px solid rgba(255, 255, 255, 0.5);
 
     background: $bg2;
 }
 
 header {
-    background: $bg1;
     width: 100vw;
 
     padding: 1em;
@@ -152,7 +171,6 @@ header {
 }
 
 footer {
-    background: $bg1;
     width: 100vw;
 
     padding: 1em;
@@ -161,6 +179,7 @@ footer {
     text-align: center;
 
     font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.75);
 }
 
 #demos {
@@ -177,8 +196,8 @@ footer {
         flex-flow: column nowrap;
 
         padding: 1em;
-        border: 1px solid rgb(255, 255, 255);
-        border-radius: 0.7em;
+        border: 1px solid #fff;
+        border: 1px solid rgba(255, 255, 255, 0.5);
 
         background: $bg2;
 
@@ -190,17 +209,10 @@ footer {
 
         > h2 {
             margin: 0;
+            margin-top: 0.5em;
             order: 20;
         }
     }
-}
-
-.wait-for-icons {
-    opacity: 0;
-}
-
-.fontawesome-i2svg-complete .wait-for-icons {
-    animation: fade-in 2s forwards;
 }
 
 @keyframes fade-in {
@@ -211,4 +223,11 @@ footer {
 	100% {
 		opacity: 1;
 	}
+}
+
+.icons {
+    color: #fff;
+    padding: .8em;
+    font-size: 2rem;
+    height: 2rem;
 }

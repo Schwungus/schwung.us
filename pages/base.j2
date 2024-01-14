@@ -10,32 +10,32 @@
         data-website-id="583fb709-3539-4f6c-b271-b18ccb086f29">
     </script>
     <script src="/assets/base.js"></script>
-    <title>{% block title %}{% endblock %} | Schwungus Software - Indie Game Developers</title>
+    <title>{% block title %}{% endblock %} - Schwungus Software</title>
     {% block head %}
     {% endblock %}
 </head>
 
 <body>
-    <header>
+    <!--*<header>
         {% block header %}
-            {% for icon, name, href in
-                [("fa-brands fa-github", "GitHub", "https://github.com/Schwungus-Software")] %}
-                <div class="wait-for-icons">
-                    <a href={{ href }}>
-                        <i class="{{ icon }}"></i>
-                        {{ name }}
-                    </a>
-                </div>
-            {% endfor %}
         {% endblock %}
-    </header>
+    </header>-->
     <main>
         {% block main %}
         {% endblock %}
     </main>
     <footer>
         {% block footer %}
-            <a href="/">Go back</a>
+            {% for icon, name, href in
+                [("fa-brands fa-github", "GitHub", "https://github.com/Schwungus-Software")] %}
+                <div class="icons">
+                    <a title={{ name }} href={{ href }}>
+                        <i class="{{ icon }}"></i>
+                    </a>
+                </div>
+            {% endfor %}
+            
+            Copyright (c) 2023-2024 Schwungus Software
         {% endblock %}
     </footer>
 </body>
