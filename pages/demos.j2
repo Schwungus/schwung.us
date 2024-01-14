@@ -2,19 +2,25 @@
 
 {% block title %}Demos{% endblock %}
 
-{% block main %}
-    <a href="/"><img id="small-logo" src="/assets/logo_small.png" alt="Schwungus Software logo"></img></a>
-    <h1>Demos</h1>
+{% block head %}
+<link rel="preload" href="/assets/logo_small.png" as="image">
+{% endblock %}
 
-    <div id="demos">
-        {% for name, img, href in
-            [("Bombswab", "/assets/bombswab.png", "https://bombswab.schwungus.software")] %}
-            <a href={{ href }}>
-                <div>
-                    <h2>{{ name }}</h2>
-                    <img src={{ img }} alt={{ name }}>
-                </div>
-            </a>
-        {% endfor %}
-    </div>
+{% block main %}
+<a href="/">
+    <img id="small-logo" src="/assets/logo_small.png" alt="Schwungus Software logo">
+</a>
+
+<h1>Demos</h1>
+
+<div id="demos">
+    {% for name, img, link in [("Bombswab", "/assets/bombswab.png", "https://bombswab.schwungus.software")] %}
+    <a href="{{ link }}">
+        <div>
+            <h2>{{ name }}</h2>
+            <img src="{{ img }}" alt="{{ name }}">
+        </div>
+    </a>
+    {% endfor %}
+</div>
 {% endblock %}

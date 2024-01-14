@@ -3,9 +3,10 @@
 {% block title %}Home{% endblock %}
 
 {% block head %}
-    <meta name="description"
-          content="Schwungus Software is all about making games, tools and game engines. We specialize in GameMaker and C++ development. Check out some of our projects: PNEngine, HQEngine, and Bombswab!">
-    <script type="application/ld+json">
+<link rel="preload" href="/assets/logo.png" as="image">
+<meta name="description"
+    content="Schwungus Software is all about making games, tools and game engines. We specialize in GameMaker and C++ development. Check out our projects!">
+<script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Organization",
@@ -14,12 +15,12 @@
         "logo": "https://schwungus.software/assets/logo_visible.png",
         "email": "contact@schwungus.software"
     }
-    </script>
+</script>
 {% endblock %}
 
 {% block main %}
-    <a href="/"><img id="logo" src="/assets/logo.png" alt="Schwungus Software logo"></img></a>
-    <h1 id="wavy-text">Check back soon</h1>
-    <script src="/assets/index.js"></script>
-    <div id="check-out">...or check out <a href="/demos.html">our demos</a>!</div>
+<a href="/"><img id="logo" src="/assets/logo.png" alt="Schwungus Software logo"></img></a>
+<h1 id="wavy-text">Check back soon</h1>
+<script src="/assets/index.js"></script>
+<div id="check-out">...or check out <a href="/demos.html">our demos</a>!</div>
 {% endblock %}
