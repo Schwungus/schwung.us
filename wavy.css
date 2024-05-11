@@ -1,0 +1,15 @@
+.wavy-text {
+    margin-top: 0.5em;
+    animation: fade-in 3s forwards;
+    text-align: center;
+}
+
+.wavy-text>span {
+    display: inline-block;
+    margin-right: 1px;
+    animation: wavy 2s ease-in-out infinite;
+}
+
+.wavy-text>span.space {
+    margin-left: 1ex;
+}

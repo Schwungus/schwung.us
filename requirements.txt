@@ -1,2 +1,0 @@
-libsass
-jinja2
