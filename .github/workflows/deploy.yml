@@ -10,21 +10,16 @@ jobs:
     name: Deploy to schwungus.software
     runs-on: ubuntu-latest
     steps:
-      - name: Install dependencies
-        run: |
-          sudo apt update
-          sudo apt install python3 python3-venv python3-pip
       - name: Checkout
         uses: actions/checkout@v4
         with:
           ref: deploy
-      - name: Build
+      - name: Produce output files
         run: |
-          python3 -m venv venv
-          source venv/bin/activate
-          pip install -r requirements.txt
-          ./build.py
-      - name: Copy the files
+          rm -rf out
+          mkdir -p out
+          cp -r index.html wavy.js index.css wavy.css static/robots.txt assets/ out
+      - name: Copy the output files onto the server
         uses: appleboy/scp-action@v0.1.4
         with:
           source: ${{ github.workspace }}/out
