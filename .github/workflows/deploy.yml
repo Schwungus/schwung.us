@@ -18,7 +18,7 @@ jobs:
         run: |
           rm -rf out
           mkdir -p out
-          cp -r index.html wavy.js index.css wavy.css static/robots.txt assets/ out
+          cp -r index.html wavy.js index.css wavy.css sitemap.xml static/robots.txt assets/ out
       - name: Copy the output files onto the server
         uses: appleboy/scp-action@v0.1.4
         with:
