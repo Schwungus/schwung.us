@@ -58,18 +58,18 @@ h2 {
 body {
     width: 100vw;
     height: 100vh;
-
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 1em;
-
-    align-items: center;
-    justify-content: space-between;
-
     overflow-y: auto;
 }
 
 main {
+    width: 100vw;
+
+    position: fixed;
+    left: 50vw;
+    top: 50vh;
+
+    transform: translateX(-50%);
+
     padding: 1em;
 
     display: flex;
@@ -115,7 +115,11 @@ header>a {
 }
 
 footer {
-    animation: fade-in forwards linear 2s;
+    position: fixed;
+    left: 50vw;
+    bottom: 0;
+
+    transform: translateX(-50%);
 
     display: flex;
     flex-flow: row nowrap;
@@ -125,6 +129,8 @@ footer {
 
     padding: 1em 32px;
     gap: 32px;
+
+    animation: fade-in forwards linear 2s;
 }
 
 @keyframes fade-in {
