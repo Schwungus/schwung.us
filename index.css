@@ -102,6 +102,8 @@ header>a {
 }
 
 footer {
+    animation: fade-in forwards linear 2s;
+
     display: flex;
     flex-flow: row nowrap;
 
@@ -110,4 +112,14 @@ footer {
 
     padding: 1em 32px;
     gap: 32px;
+}
+
+@keyframes fade-in {
+    0%, 10% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
