@@ -37,12 +37,25 @@ h2 {
     font-weight: 500;
 }
 
-body {
-    background-image: url("/assets/background.png");
+#bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    z-index: -1000;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url("/assets/background.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 
+    filter: contrast(150%) blur(5px);
+}
+
+body {
     width: 100vw;
     height: 100vh;
 
