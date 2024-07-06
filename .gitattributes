@@ -1,3 +1,9 @@
+assets/background.webp filter=lfs diff=lfs merge=lfs -text
+assets/logo_small.webp filter=lfs diff=lfs merge=lfs -text
+assets/logo_visible.webp filter=lfs diff=lfs merge=lfs -text
+assets/logo.webp filter=lfs diff=lfs merge=lfs -text
+assets/favicon.png filter=lfs diff=lfs merge=lfs -text
+assets/Stilu-Regular.otf filter=lfs diff=lfs merge=lfs -text
 . !text !filter !merge !diff
 assets !text !filter !merge !diff
 assets/* !text !filter !merge !diff
