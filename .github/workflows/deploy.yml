@@ -21,12 +21,13 @@ jobs:
           mkdir -p out
           cp -r index.html wavy.js index.css wavy.css sitemap.xml robots.txt assets/ out
       - name: Copy the output files onto the server
-        uses: appleboy/scp-action@v0.1.4
+        uses: appleboy/scp-action@v0.1.7
         with:
           source: ${{ github.workspace }}/out
-          rm: true
-          strip_components: 1
           target: ${{ secrets.WEBSITE_PATH }}/website
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          strip_components: 1
+          overwrite: true
+          rm: true
