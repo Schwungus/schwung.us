@@ -4,16 +4,20 @@ pipeline {
     stages {
         stage("Build") {
             steps {
-                sh "rm -rf out && mkdir -p out"
-                sh "cp -r index.html wavy.js index.css wavy.css sitemap.xml robots.txt assets/ out"
+                def files = 'index.html wavy.js index.css wavy.css sitemap.xml robots.txt assets/'
+                sh 'rm -rf out && mkdir -p out'
+                sh "cp -r ${files} out"
             }
         }
 
         stage("Deploy") {
             steps {
-                sh "mkdir -p /public/sites"
-                sh "rm -rf /public/sites/schwungus.software"
-                sh "mv out /public/sites/schwungus.software"
+                def sitesDir = '/public/sites'
+                def outDir = "${sitesDir}/schwungus.software"
+
+                sh "mkdir -p ${sitesDir}"
+                sh "rm -rf ${outDir}"
+                sh "mv out ${outDir}"
             }
         }
     }
