@@ -82,11 +82,9 @@ main {
 }
 
 #logo {
-    width: 45vmax;
+    width: 100%;
 
     display: block;
-
-    margin: 0 auto;
     padding: 0;
 
     text-align: center;
@@ -107,7 +105,9 @@ main {
 }
 
 header {
+    width: 45vmax;
     padding: 1em;
+    margin: 0 auto;
 }
 
 header>a {
