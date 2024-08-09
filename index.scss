@@ -1,0 +1,252 @@
+$gray-1: rgb(128, 128, 128);
+$white: rgb(255, 255, 255);
+$black-trans: rgba(0, 0, 0, 0.5);
+
+$black-bars-width: 24vw;
+
+$main-margin: 14vh;
+$main-height: calc(100vh - 2 * $main-margin);
+
+$anim-start: 1s;
+$anim-slide-bars: 1s;
+$anim-show-main: 1.2s;
+
+@font-face {
+    font-family: Stilu;
+    src: url("/assets/Stilu-Regular.otf") format("opentype");
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: $gray-1;
+    color: $white;
+
+    font-family: Stilu;
+    font-size: 16pt;
+}
+
+* {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+a {
+    color: $white;
+    text-decoration: underline;
+    text-decoration-color: $white;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+#bg, body {
+    width: 100vw;
+    height: 100vh;
+}
+
+#bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    z-index: -1000;
+
+    background-image: url("/assets/background.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    filter: contrast(150%) blur(5px);
+}
+
+#root {
+    height: 100vh;
+}
+
+body, #root, main {
+    overflow: hidden;
+}
+
+header {
+    position: absolute;
+    left: 50vw;
+    top: 0;
+
+    transform: translateX(-50%);
+
+    width: 45vmax;
+    padding: 1em;
+    margin: 0 auto;
+
+    animation: screw-up-header forwards ease-in-out;
+
+    > a {
+        text-decoration: none;
+    }
+
+    @keyframes screw-up-header {
+        40%, 100% {
+            top: -100%;
+        }
+    }
+}
+
+main {
+    position: absolute;
+    left: 50vw;
+    top: 50%;
+
+    margin: $main-margin 0;
+
+    transform: translateX(-50%);
+    height: $main-height;
+
+    opacity: 0;
+
+    animation: screw-up-main forwards ease-in-out;
+
+    @keyframes screw-up-main {
+        0%, 40% {
+            opacity: 0;
+        }
+
+        100% {
+            top: 0%;
+            opacity: 1;
+        }
+    }
+}
+
+#slides {
+    padding: 1ex 1ch;
+
+    height: 100%;
+    margin: 0 auto;
+
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none;
+    overflow-y: auto;
+
+    > article {
+        scroll-snap-align: start;
+        height: $main-height;
+
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+    }
+}
+
+header, main {
+    animation-delay: $anim-start + $anim-slide-bars;
+    animation-duration: $anim-show-main;
+}
+
+#logo {
+    width: 100%;
+
+    display: block;
+    padding: 0;
+
+    text-align: center;
+}
+
+#left-bar, #right-bar {
+    position: fixed;
+    z-index: 1000;
+    height: 100vh;
+
+    width: $black-bars-width;
+    top: 0;
+
+    background: #000000F0;
+}
+
+
+@each $dir in left, right {
+    ##{$dir}-bar {
+        #{$dir}: 0;
+        animation: slide-#{$dir} forwards linear;
+        animation-delay: $anim-start;
+        animation-duration: $anim-slide-bars;
+    }
+
+    @keyframes slide-#{$dir} {
+        0% {
+            #{$dir}: 0;
+        }
+
+        100% {
+            #{$dir}: -$black-bars-width;
+        }
+    }
+}
+
+footer {
+    position: fixed;
+    left: 50vw;
+    bottom: 0;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    flex-flow: row nowrap;
+
+    background: $black-trans;
+    border-radius: 1em 1em 0 0;
+
+    padding: 1em 32px;
+    gap: 32px;
+}
+
+#slides > * {
+    flex: 0 1;
+}
+
+div.slide-goto {
+    width: 100%;
+    flex: 1 0;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 1ch;
+}
+
+button.slide-goto {
+    color: $white;
+    text-decoration-color: $white;
+    text-decoration-line: underline;
+
+    cursor: pointer;
+
+    background: transparent;
+    border: none;
+
+    font-weight: 900;
+
+    &.next::after {
+        content: " ->";
+    }
+
+    &.prev::before {
+        content: "<- ";
+    }
+}

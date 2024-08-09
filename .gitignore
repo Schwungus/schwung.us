@@ -2,7 +2,7 @@
 /out
 /venv
 
-assets/index.css
-assets/index.css.map
+index.css
+index.css.map
 
 *~
