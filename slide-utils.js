@@ -34,6 +34,4 @@
 
         idx++;
     }
-
-    slidesRoot.focus({ preventScroll: true });
 })()
