@@ -4,9 +4,6 @@ $black-trans: rgba(0, 0, 0, 0.5);
 
 $black-bars-width: 24vw;
 
-$main-margin: 14vh;
-$main-height: calc(100vh - 2 * $main-margin);
-
 $anim-start: 1s;
 $anim-slide-bars: 1s;
 $anim-show-main: 1.2s;
@@ -75,20 +72,14 @@ h2 {
     filter: contrast(150%) blur(5px);
 }
 
-#root {
-    height: 100vh;
-}
-
-body, #root, main {
-    overflow: hidden;
+header, footer {
+    position: fixed;
+    left: 50vw;
+    transform: translateX(-50%);
 }
 
 header {
-    position: absolute;
-    left: 50vw;
     top: 0;
-
-    transform: translateX(-50%);
 
     width: 45vmax;
     padding: 1em;
@@ -107,19 +98,45 @@ header {
     }
 }
 
+footer {
+    bottom: 0;
+
+    display: flex;
+    flex-flow: row nowrap;
+
+    background: $black-trans;
+    border-radius: 1em 1em 0 0;
+
+    padding: 1em 32px;
+    gap: 32px;
+}
+
 main {
     position: absolute;
-    left: 50vw;
     top: 50%;
 
-    margin: $main-margin 0;
+    width: 100vw;
+    height: 100vh;
 
-    transform: translateX(-50%);
-    height: $main-height;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
 
     opacity: 0;
 
     animation: screw-up-main forwards ease-in-out;
+
+    > article {
+        scroll-snap-align: start;
+        height: 100vh;
+
+        width: calc(min(640px, 50vw));
+        padding: calc(min(240px, 100vh / 4)) 0;
+        margin: 0 auto;
+
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+    }
 
     @keyframes screw-up-main {
         0%, 40% {
@@ -127,29 +144,9 @@ main {
         }
 
         100% {
-            top: 0%;
+            top: 0;
             opacity: 1;
         }
-    }
-}
-
-#slides {
-    padding: 1ex 1ch;
-
-    height: 100%;
-    margin: 0 auto;
-
-    scroll-snap-type: y mandatory;
-    scrollbar-width: none;
-    overflow-y: auto;
-
-    > article {
-        scroll-snap-align: start;
-        height: $main-height;
-
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-between;
     }
 }
 
@@ -196,23 +193,6 @@ header, main {
             #{$dir}: -$black-bars-width;
         }
     }
-}
-
-footer {
-    position: fixed;
-    left: 50vw;
-    bottom: 0;
-
-    transform: translateX(-50%);
-
-    display: flex;
-    flex-flow: row nowrap;
-
-    background: $black-trans;
-    border-radius: 1em 1em 0 0;
-
-    padding: 1em 32px;
-    gap: 32px;
 }
 
 #slides > * {

@@ -1,5 +1,5 @@
 (function () {
-    const slidesRoot = document.getElementById("slides");
+    const slidesRoot = document.getElementsByTagName("main").item(0);
     const slides = slidesRoot.children;
 
     let idx = 0;
