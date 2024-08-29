@@ -31,6 +31,10 @@ html {
     font-size: 16pt;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 * {
     font-family: inherit;
     font-size: inherit;
@@ -52,7 +56,8 @@ h2 {
     font-weight: 500;
 }
 
-#bg, body {
+#bg,
+body {
     width: 100vw;
     height: 100vh;
 }
@@ -72,7 +77,8 @@ h2 {
     filter: contrast(150%) blur(5px);
 }
 
-header, footer {
+header,
+footer {
     position: fixed;
     left: 50vw;
     transform: translateX(-50%);
@@ -92,7 +98,8 @@ header {
     }
 
     @keyframes screw-up-header {
-        40%, 100% {
+        40%,
+        100% {
             top: -100%;
         }
     }
@@ -139,7 +146,8 @@ main {
     }
 
     @keyframes screw-up-main {
-        0%, 40% {
+        0%,
+        40% {
             opacity: 0;
         }
 
@@ -150,7 +158,8 @@ main {
     }
 }
 
-header, main {
+header,
+main {
     animation-delay: $anim-start + $anim-slide-bars;
     animation-duration: $anim-show-main;
 }
@@ -164,7 +173,8 @@ header, main {
     text-align: center;
 }
 
-#left-bar, #right-bar {
+#left-bar,
+#right-bar {
     position: fixed;
     z-index: 1000;
     height: 100vh;
@@ -172,9 +182,8 @@ header, main {
     width: $black-bars-width;
     top: 0;
 
-    background: #000000F0;
+    background: #000000f0;
 }
-
 
 @each $dir in left, right {
     ##{$dir}-bar {
@@ -186,11 +195,15 @@ header, main {
 
     @keyframes slide-#{$dir} {
         0% {
-            #{$dir}: 0;
+            transform: translateX(0);
         }
 
         100% {
-            #{$dir}: -$black-bars-width;
+            @if $dir ==left {
+                transform: translateX(-100%);
+            } @else {
+                transform: translateX(100%);
+            }
         }
     }
 }
