@@ -8,9 +8,17 @@ $anim-start: 1s;
 $anim-slide-bars: 1s;
 $anim-show-main: 1.2s;
 
+$mobile-width: 800px;
+
 @font-face {
     font-family: Stilu;
     src: url("/assets/Stilu-Regular.otf") format("opentype");
+}
+
+@mixin mobile {
+    @media only screen and (max-width: $mobile-width) {
+        @content;
+    }
 }
 
 html,
@@ -163,6 +171,10 @@ header,
 main {
     animation-delay: $anim-start + $anim-slide-bars;
     animation-duration: $anim-show-main;
+
+    @include mobile {
+        animation-delay: $anim-start;
+    }
 }
 
 #logo {
@@ -192,6 +204,11 @@ main {
         animation: slide-#{$dir} forwards linear;
         animation-delay: $anim-start;
         animation-duration: $anim-slide-bars;
+
+        @include mobile {
+            animation: none;
+            opacity: 0;
+        }
     }
 
     @keyframes slide-#{$dir} {
@@ -200,7 +217,7 @@ main {
         }
 
         100% {
-            @if $dir ==left {
+            @if $dir == left {
                 transform: translateX(-100%);
             } @else {
                 transform: translateX(100%);
