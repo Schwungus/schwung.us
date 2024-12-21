@@ -1,2 +1,2 @@
 User-agent: *
-Allow: /
+Sitemap: https://schwung.us/sitemap.xml
