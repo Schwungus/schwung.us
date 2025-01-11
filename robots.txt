@@ -1,2 +1,3 @@
 User-agent: *
 Sitemap: https://schwung.us/sitemap.xml
+Host: https://schwung.us
