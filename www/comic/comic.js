@@ -120,13 +120,9 @@ function setPage(page, force) {
 }
 
 function toggleFullscreen() {
-    const comicBox = document.getElementById("comic");
-
-    if (document.fullscreenElement == comicBox) {
-        if (document.exitFullscreen) {
-            document.exitFullscreen();
-        }
-    } else if (comicBox.requestFullscreen) {
-        comicBox.requestFullscreen();
+    if (document.fullscreenElement) {
+        document.exitFullscreen();
+    } else {
+        document.getElementById("comic").requestFullscreen();
     }
 }
