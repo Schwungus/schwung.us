@@ -1,63 +1,63 @@
 @font-face {
-  font-family: Stilu;
-  src: url("/assets/Stilu-Regular.otf") format("opentype");
+    font-family: Stilu;
+    src: url("/assets/Stilu-Regular.otf") format("opentype");
 }
 
 body {
-  background: url("/assets/background.png") no-repeat center center fixed;
-  background-size: cover;
-  margin: auto;
-  width: 100%;
-  font-family: Stilu;
-  font-size: 1vw;
-  line-height: 2;
-  opacity: 0.5;
-  text-align: center;
+    background: url("/assets/background.png") no-repeat center center fixed;
+    background-size: cover;
+    margin: auto;
+    width: 100%;
+    font-family: Stilu;
+    font-size: 1vw;
+    line-height: 2;
+    opacity: 0.5;
+    text-align: center;
 }
 
 a {
-  color: rgb(0, 64, 128);
+    color: rgb(0, 64, 128);
 }
 
 header {
-  position: fixed;
-  top: 2.5vh;
-  width: 100vw;
+    position: fixed;
+    top: 2.5vh;
+    width: 100vw;
 }
 
 header img {
-  width: 16%;
+    width: 16%;
 }
 
 main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 20vw;
-  height: 100vh;
-  margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    height: 100vh;
+    margin: auto;
 }
 
 main div {
-  width: 50vw;
+    width: 50vw;
 }
 
 main img {
-  width: 10vw;
+    width: 10vw;
 }
 
 .links {
-  font-size: 200%;
-  margin: 0 auto 1% auto;
-  display: grid;
-  grid-auto-flow: column;
-  gap: 25%;
-  width: fit-content;
+    font-size: 200%;
+    margin: 0 auto 1% auto;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 25%;
+    width: fit-content;
 }
 
 footer {
-  position: fixed;
-  bottom: 5%;
-  width: 100%;
-  text-align: center;
+    position: fixed;
+    bottom: 5%;
+    width: 100%;
+    text-align: center;
 }
