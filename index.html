@@ -2,10 +2,12 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+
         <title>Schwungus</title>
         <meta name="description" content="All things Schwungus" />
+
         <link rel="canonical" href="https://schwung.us/" />
-        <link rel="icon" type="image/x-icon" href="/assets/favicon.png" />
+        <link rel="icon" type="image/png" href="/assets/favicon.png" />
         <link rel="stylesheet" href="/style.css" />
 
         <script
@@ -21,32 +23,33 @@
     </head>
 
     <body>
-        <header><img src="/assets/logo_silhouette.png" alt="Logo" /></header>
+        <header>
+            <a href="https://schwung.us">
+                <img src="/assets/logo_silhouette.png" alt="Logo" />
+            </a>
+        </header>
 
         <main>
             <!--<div><a href="comics">Looking for comics?</a></div>-->
-            <div>
-                Check back soon!<br /><a href="comics">Looking for comics?</a>
-            </div>
-            <div><img src="/assets/video.png" alt="Video" /></div>
+            <p>Check back soon!</p>
+            <img id="video" src="/assets/video.png" alt="Video" />
         </main>
 
         <footer>
-            <div class="links">
-                <div>
-                    <a href="mailto:contact@schwung.us" title="Email"
-                        ><i class="fa fa-envelope"></i
-                    ></a>
-                </div>
+            <section id="links">
+                <a href="mailto:contact@schwung.us" title="Email"
+                    ><i class="fa fa-envelope"></i
+                ></a>
 
-                <div>
-                    <a href="https://github.com/Schwungus" title="GitHub"
-                        ><i class="fa-brands fa-github"></i
-                    ></a>
-                </div>
-            </div>
-
-            <sub>© 2025 Schwungus. All rights reserved.</sub>
+                <a href="https://github.com/Schwungus" title="GitHub"
+                    ><i class="fa-brands fa-github"></i
+                ></a>
+            </section>
+            <section id="copying">
+                &copy; 2025
+                <a href="https://github.com/Schwungus">Schwungus</a>. All rights
+                reserved.
+            </section>
         </footer>
     </body>
 </html>
