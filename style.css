@@ -21,7 +21,8 @@ body {
 /* regretful CSS boilerplate ends here */
 
 body {
-    background: url("/assets/background.png") no-repeat center fixed;
+    background-image: url("/assets/background.png");
+    background-position: center;
     background-size: cover;
 
     width: calc(min(100vw, 800px));
@@ -38,7 +39,7 @@ body {
     justify-content: space-between;
     align-items: center;
 
-    opacity: 0.7;
+    opacity: 0.6;
 }
 
 a {
