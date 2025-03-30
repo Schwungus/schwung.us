@@ -37,6 +37,8 @@ body {
     flex-flow: column nowrap;
     justify-content: space-between;
     align-items: center;
+
+    opacity: 0.7;
 }
 
 a {
