@@ -7,40 +7,57 @@ body {
   background: url("/assets/background.png") no-repeat center center fixed;
   background-size: cover;
   margin: auto;
-  width: fit-content;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-direction: column;
+  width: 100%;
   font-family: Stilu;
-  color: rgba(0, 0, 0, 0.5);
-}
-
-body a {
-  color: rgba(0, 64, 128, 0.5);
-  font-weight: bold;
-}
-
-body section {
-  margin: auto;
+  font-size: 1vw;
+  line-height: 2;
+  opacity: 0.5;
   text-align: center;
-  line-height: 1.5;
+}
+
+a {
+  color: rgb(0, 64, 128);
+}
+
+header {
+  position: fixed;
+  top: 2.5vh;
+  width: 100vw;
 }
 
 header img {
-  width: 50%;
-  opacity: 50%;
+  width: 16%;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20vw;
+  height: 100vh;
+  margin: auto;
 }
 
 main div {
-  margin-bottom: 10%;
+  width: 50vw;
+}
+
+main img {
+  width: 10vw;
 }
 
 .links {
   font-size: 200%;
-  margin-bottom: 10%;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  margin: 0 auto 1% auto;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 25%;
+  width: fit-content;
+}
+
+footer {
+  position: fixed;
+  bottom: 5%;
+  width: 100%;
+  text-align: center;
 }
