@@ -1,0 +1,61 @@
+@import url("/style.css");
+
+header img {
+    min-width: 48px;
+    max-width: 4vmax;
+    vertical-align: middle;
+    margin-right: 1em;
+}
+
+main {
+    display: block;
+}
+
+.catalog {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.series {
+    background: unset;
+    background-color: white;
+    border-radius: 10%;
+    margin: 1em;
+    padding: 1em;
+    width: 25%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.series-logo {
+    width: 80%;
+}
+
+.chapters {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin: 2em;
+}
+
+.chapters a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.chapter {
+    font-size: 200%;
+}
+
+.chapter-wip {
+    opacity: 50%;
+    user-select: none;
+}
