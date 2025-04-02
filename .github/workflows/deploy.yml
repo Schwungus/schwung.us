@@ -1,7 +1,6 @@
 name: Deploy to schwung.us
 
 on:
-  workflow_dispatch:
   push:
     branches: ["deploy"]
 
@@ -25,10 +24,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with: { ref: deploy }
-      - name: Assemble output files
+      - name: Build
         run: |
-          rm -rf dist; mkdir -p dist
-          cp -r index.html style.css sitemap.xml robots.txt assets dist
+          wget -O sanity https://github.com/nonk123/sanity/releases/download/gh-actions/sanity-release-linux
+          RUST_LOG=debug ./sanity
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
