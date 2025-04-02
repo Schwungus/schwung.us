@@ -3,10 +3,8 @@
     src: url("/assets/Stilu-Regular.otf") format("opentype");
 }
 
-/*
- * from nonk to cantsleep:
- *   the people who wrote the CSS specs regret making the decisions that led to this boilerplate
- */
+// from nonk to cantsleep:
+//   the people who wrote the CSS specs regret making the decisions that led to this boilerplate
 
 html,
 body {
@@ -18,7 +16,7 @@ body {
     box-sizing: border-box;
 }
 
-/* regretful CSS boilerplate ends here */
+// regretful CSS boilerplate ends here
 
 body {
     background-image: url("/assets/background.png");
