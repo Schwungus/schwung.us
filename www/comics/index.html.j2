@@ -1,0 +1,48 @@
+{% extends "_base.html" %}
+
+{% block title %}Comics{% endblock title %}
+{% block description %}Comics from Schwungus{% endblock description %}
+{% block url %}/comics{% endblock url %}
+
+{% block head %}
+<link rel="stylesheet" href="/comics/style.css" />
+{% endblock head %}
+
+{% block content %}
+
+<h1>COMICS</h1>
+
+<div class="catalog">
+    <div class="series">
+        <img src="/comics/sfusion/logo.png" alt="S-Fusion" class="series-logo" />
+
+        <p>
+            The supernatural volcano "Wishing Well" erupts twice,
+            opening an opportunity for the worthy to make their one
+            wish come true.
+        </p>
+
+        <div class="chapters">
+            <a href="/sfusion/ch1">
+                <div class="chapter">1</div>
+            </a>
+            <div class="chapter chapter-wip">2</div>
+            <div class="chapter chapter-wip">3</div>
+        </div>
+    </div>
+
+    <div class="series">
+        <img src="/assets/logo_silhouette.png" alt="S-Fusion" class="series-logo" />
+
+        <p>
+            Two bumbling idiots decide to make an organization on
+            GitHub.
+        </p>
+
+        <div class="chapters">
+            <div class="chapter chapter-wip">READ</div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

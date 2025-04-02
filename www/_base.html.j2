@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Schwungus | {% block title %}{% endblock title %}</title>
+    <meta name="description" content="{% block description %}{% endblock description %}" />
+
+    <link rel="canonical" href="https://schwung.us{% block url %}{% endblock url %}" />
+    <link rel="icon" type="image/png" href="/assets/favicon.png" />
+    <link rel="stylesheet" href="/style.css" />
+
+    <meta http-equiv="Content-Language" content="en" />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:title" content="{{ self.title() }}" />
+    <meta property="og:description" content="{{ self.description() }}" />
+    <meta property="og:image" content="https://schwung.us/assets/logo_small.png" />
+    <meta property="og:url" content="https://schwung.us{{ self.url() }}" />
+    <meta property="og:site_name" content="Schwungus" />
+    <meta property="og:type" content="{% block og_type %}profile{% endblock og_type %}" />
+
+    {% block head %}{% endblock head %}
+
+    <script src="https://kit.fontawesome.com/069decd2d9.js" crossorigin="anonymous"></script>
+    <script defer src="https://umami.schwung.us/script.js"
+        data-website-id="583fb709-3539-4f6c-b271-b18ccb086f29"></script>
+</head>
+
+<body>
+    <header>
+        <a href="https://schwung.us">
+            <img src="/assets/logo_silhouette.png" alt="Logo" />
+        </a>
+    </header>
+
+    <main>
+        {% block content %}{% endblock content %}
+    </main>
+
+    <footer>
+        <section id="links">
+            <a href="mailto:contact@schwung.us" title="Email"><i class="fa fa-envelope"></i></a>
+            <a href="https://github.com/Schwungus" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        </section>
+
+        <section id="copying">
+            &copy; 2025
+            <a href="https://github.com/Schwungus">Schwungus</a>. All rights
+            reserved.
+        </section>
+    </footer>
+</body>
+
+</html>

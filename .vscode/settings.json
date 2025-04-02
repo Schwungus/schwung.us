@@ -8,5 +8,11 @@
     },
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[scss]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jinja-html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
     }
 }

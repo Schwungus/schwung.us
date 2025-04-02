@@ -1,16 +1,3 @@
-@import url("/style.css");
-
-header img {
-    min-width: 48px;
-    max-width: 4vmax;
-    vertical-align: middle;
-    margin-right: 1em;
-}
-
-main {
-    display: block;
-}
-
 .catalog {
     display: flex;
     flex-direction: row;

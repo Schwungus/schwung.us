@@ -3,6 +3,7 @@
         "esbenp.prettier-vscode",
         "EditorConfig.EditorConfig",
         "WakaTime.vscode-wakatime",
-        "wayou.vscode-todo-highlight"
+        "wayou.vscode-todo-highlight",
+        "samuelcolvin.jinjahtml"
     ]
 }
