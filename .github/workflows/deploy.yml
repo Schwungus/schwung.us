@@ -27,6 +27,7 @@ jobs:
       - name: Build
         run: |
           wget -O sanity https://github.com/nonk123/sanity/releases/download/gh-actions/sanity-release-linux
+          chmod +x sanity
           RUST_LOG=debug ./sanity
       - name: Setup Pages
         uses: actions/configure-pages@v5
