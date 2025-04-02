@@ -33,7 +33,7 @@
 <body>
     <header>
         <a href="/">
-            <img src="/assets/logo_silhouette.png" alt="Logo" />
+            <img src="{% block logo %}/assets/logo_silhouette.png{% endblock logo %}" alt="Logo" />
         </a>
     </header>
 
@@ -42,10 +42,12 @@
     </main>
 
     <footer>
+        {% block links %}
         <section id="links">
             <a href="mailto:contact@schwung.us" title="Email"><i class="fa fa-envelope"></i></a>
             <a href="https://github.com/Schwungus" title="GitHub"><i class="fa-brands fa-github"></i></a>
         </section>
+        {% endblock links %}
 
         <section id="copying">
             &copy; 2025
