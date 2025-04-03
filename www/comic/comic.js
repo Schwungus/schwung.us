@@ -21,102 +21,63 @@ document.addEventListener("DOMContentLoaded", () => {
     pageImg.addEventListener("click", nextPage);
     next.addEventListener("click", nextPage);
 
-    var id = params.get("id");
-    var page = params.get("page") ?? 0;
-    var comic, title;
+    setPage(getPageNum(), true);
 
-    if (id in comics) {
-        comic = comics[id];
-        page = Math.min(Math.max(page, 0), comic.pages - 1);
-        title = comic.name;
-    } else {
-        comic = comics[null];
-        id = null;
-        page = 0;
-        title = comic.name;
+    const title = getComic().name;
+    document.title = `${title} | Schwungus Comics`;
+});
+
+function getPageNum() {
+    return params.get("page") ?? 0;
+}
+
+function getComic() {
+    const id = params.get("id");
+    return comics[id in comics ? id : null];
+}
+
+function previousPage() {
+    const oldPage = Math.min(getPageNum(), getComic().pages);
+    const newPage = Math.max(oldPage - 1, 0);
+    setPage(newPage);
+}
+
+function nextPage() {
+    const newPage = Math.min(getPageNum() + 1, getComic().pages - 1);
+    setPage(newPage);
+}
+
+function setPage(page, force) {
+    const previous = document.getElementById("previous");
+    const pageImg = document.getElementById("page");
+    const next = document.getElementById("next");
+
+    const id = params.get("id");
+    const comic = getComic();
+
+    if (!force && getPageNum() == page) {
+        return;
     }
+
+    params.set("page", page);
+    window.history.pushState(null, "", "/comic?" + params.toString());
+    pageImg.src = `/comics/assets/${id}/${page}.png`;
 
     if (page <= 0) {
         previous.style.visibility = "hidden";
         previous.style.cursor = "default";
+    } else {
+        previous.style.visibility = "visible";
+        previous.style.cursor = "pointer";
     }
 
     if (page >= comic.pages - 1) {
         pageImg.style.cursor = "default";
         next.style.visibility = "hidden";
         next.style.cursor = "default";
-    }
-
-    document.title = `${title} - Schwungus Comics`;
-    pageImg.src = `/comics/assets/${id}/${page}.png`;
-});
-
-function previousPage() {
-    const previous = document.getElementById("previous");
-    const pageImg = document.getElementById("page");
-    const next = document.getElementById("next");
-
-    var id = params.get("id");
-    var comic = comics[id in comics ? id : null];
-    var oldPage = Math.min(params.get("page") ?? 0, comic.pages);
-    var page = Math.max(oldPage - 1, 0);
-
-    if (oldPage != page) {
-        params.set("page", page);
-        window.history.pushState(null, "", "/comic?" + params.toString());
-        pageImg.src = `/comics/assets/${id}/${page}.png`;
-
-        if (page <= 0) {
-            previous.style.visibility = "hidden";
-            previous.style.cursor = "default";
-        } else {
-            previous.style.visibility = "visible";
-            previous.style.cursor = "pointer";
-        }
-
-        if (page >= comic.pages - 1) {
-            pageImg.style.cursor = "default";
-            next.style.visibility = "hidden";
-            next.style.cursor = "default";
-        } else {
-            pageImg.style.cursor = "pointer";
-            next.style.visibility = "visible";
-            next.style.cursor = "pointer";
-        }
-    }
-}
-
-function nextPage() {
-    const previous = document.getElementById("previous");
-    const pageImg = document.getElementById("page");
-    const next = document.getElementById("next");
-
-    var oldPage = params.get("page") ?? 0;
-    var id = params.get("id");
-    var comic = comics[id in comics ? id : null];
-    var page = Math.min(oldPage + 1, comic.pages - 1);
-
-    if (oldPage != page) {
-        params.set("page", page);
-        window.history.pushState(null, "", "/comic?" + params.toString());
-        pageImg.src = `/comics/assets/${id}/${page}.png`;
-
-        if (page <= 0) {
-            previous.style.visibility = "hidden";
-            previous.style.cursor = "default";
-        } else {
-            previous.style.visibility = "visible";
-            previous.style.cursor = "pointer";
-        }
-
-        if (page >= comic.pages - 1) {
-            pageImg.style.cursor = "default";
-            next.style.visibility = "hidden";
-            next.style.cursor = "default";
-        } else {
-            pageImg.style.cursor = "pointer";
-            next.style.visibility = "visible";
-            next.style.cursor = "pointer";
-        }
+    } else {
+        pageImg.style.cursor = "pointer";
+        next.style.visibility = "visible";
+        next.style.cursor = "pointer";
     }
 }
