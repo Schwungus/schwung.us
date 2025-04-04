@@ -1,21 +1,27 @@
+main {
+    flex-flow: column nowrap;
+}
+
 .catalog {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: stretch;
+    gap: 1em;
 }
 
 .series {
     background: unset;
     background-color: white;
     border-radius: 10%;
-    margin: 1em;
+
+    width: calc(max(25%, 240px));
     padding: 1em;
-    width: 25%;
+
     overflow: hidden;
+
     display: flex;
-    flex-direction: column;
+    flex-flow: column nowrap;
     justify-content: space-evenly;
     align-items: center;
 
@@ -26,9 +32,10 @@
 
 .chapters {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
+
     width: 100%;
     margin: 2em;
 
