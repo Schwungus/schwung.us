@@ -6,7 +6,7 @@ const comics = {
 
     "sfusion-1": {
         name: "S-Fusion Prologue Ch. 1",
-        pages: 3,
+        pages: 4,
     },
 };
 
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function getPageNum() {
-    return params.get("page") ?? 0;
+    return Number(params.get("page") ?? 0);
 }
 
 function getComic() {
