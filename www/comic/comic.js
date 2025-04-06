@@ -73,8 +73,8 @@ function setPage(page, force) {
     }
 
     params.set("page", page);
+
     window.history.pushState(null, "", "/comic?" + params.toString());
-    pageImg.src = "";
     pageImg.src = `${pagesUrl}${id}/${page}.png`;
 
     if (page <= 0) {
