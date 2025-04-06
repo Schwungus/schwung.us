@@ -1,18 +1,22 @@
-const comics = {
-    null: {
-        name: "404",
-        pages: 1,
-    },
+let comics = null;
 
-    "sfusion-1": {
-        name: "S-Fusion Prologue Ch. 1",
-        pages: 4,
-    },
-};
+let comicsUrl =
+    "https://github.com/Schwungus/schwung.us/tree/rework/www/comic/db.json";
+
+if (window.location.hostname == "localhost") {
+    comicsUrl = "/comic/db.json";
+}
+
+fetch(comicsUrl)
+    .then((x) => x.json())
+    .then((x) => {
+        comics = x;
+    })
+    .then(startup);
 
 const params = new URLSearchParams(window.location.search);
 
-document.addEventListener("DOMContentLoaded", () => {
+function startup() {
     const previous = document.getElementById("previous");
     const pageImg = document.getElementById("page");
     const next = document.getElementById("next");
@@ -25,6 +29,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const title = getComic().name;
     document.title = `${title} | Schwungus Comics`;
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    if (comics != null) {
+        startup();
+    }
 });
 
 function getPageNum() {
@@ -33,7 +43,7 @@ function getPageNum() {
 
 function getComic() {
     const id = params.get("id");
-    return comics[id in comics ? id : null];
+    return comics[id in comics ? id : ""];
 }
 
 function previousPage() {
