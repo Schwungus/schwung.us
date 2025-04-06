@@ -18,19 +18,26 @@ body {
 
 // regretful CSS boilerplate ends here
 
-html {
+#background {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 100vw;
+    height: 100vh;
+
     background-image: url("/assets/background.png");
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
+
+    z-index: -1000;
 }
 
 body {
-    width: 100%;
+    width: 100vw;
     min-height: 100vh;
-
-    margin: 0 auto;
     padding: 12px 0;
 
     font-family: Stilu;

@@ -5,7 +5,7 @@ let comicsUrl =
 let pagesUrl =
     "https://raw.githubusercontent.com/Schwungus/schwung.us/refs/heads/rework/www/comics/assets/";
 
-if (window.location.hostname == "localhost") {
+if (window.location.hostname in ["localhost", "127.0.0.1"]) {
     comicsUrl = "/comic/db.json";
     pagesUrl = "/comics/assets/";
 }

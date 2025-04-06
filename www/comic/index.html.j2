@@ -7,14 +7,14 @@
 
 {% block head %}
 <link rel="stylesheet" href="/comic/style.css" />
-<script defer src="/comic/comic.js"></script>
 <link rel="preload" href="/assets/loading.gif" as="image" type="image/gif" />
+<script defer src="/comic/comic.js"></script>
 {% endblock head %}
 
 {% block content %}
-<div class="comic">
+<div id="comic">
     <i id="previous" class="fa fa-arrow-left"></i>
-    <div class="page"><img id="page" fetchpriority="low" /></div>
+    <div id="page-container"><img id="page" fetchpriority="low" /></div>
     <i id="next" class="fa fa-arrow-right"></i>
 </div>
 {% endblock content %}
