@@ -8,12 +8,13 @@
 {% block head %}
 <link rel="stylesheet" href="/comic/style.css" />
 <script defer src="/comic/comic.js"></script>
+<link rel="preload" href="/assets/loading.gif" as="image" type="image/gif" />
 {% endblock head %}
 
 {% block content %}
 <div class="comic">
     <i id="previous" class="fa fa-arrow-left"></i>
-    <img id="page" alt="Page" />
+    <div class="page"><img id="page" fetchpriority="low" /></div>
     <i id="next" class="fa fa-arrow-right"></i>
 </div>
 {% endblock content %}

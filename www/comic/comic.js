@@ -2,9 +2,12 @@ let comics = null;
 
 let comicsUrl =
     "https://raw.githubusercontent.com/Schwungus/schwung.us/refs/heads/rework/www/comic/db.json";
+let pagesUrl =
+    "https://raw.githubusercontent.com/Schwungus/schwung.us/refs/heads/rework/www/comics/assets/";
 
 if (window.location.hostname == "localhost") {
     comicsUrl = "/comic/db.json";
+    pagesUrl = "/comics/assets/";
 }
 
 fetch(comicsUrl)
@@ -71,7 +74,8 @@ function setPage(page, force) {
 
     params.set("page", page);
     window.history.pushState(null, "", "/comic?" + params.toString());
-    pageImg.src = `/comics/assets/${id}/${page}.png`;
+    pageImg.src = "";
+    pageImg.src = `${pagesUrl}${id}/${page}.png`;
 
     if (page <= 0) {
         previous.style.visibility = "hidden";
