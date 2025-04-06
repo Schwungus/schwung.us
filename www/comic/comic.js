@@ -1,6 +1,7 @@
 let comics = null;
 
-let comicsUrl = "https://q7x.ru/schwungus/comics-db.json";
+let comicsUrl =
+    "https://raw.githubusercontent.com/Schwungus/schwung.us/refs/heads/rework/www/comic/db.json";
 
 if (window.location.hostname == "localhost") {
     comicsUrl = "/comic/db.json";
