@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function getPageNum() {
-    return Number(params.get("page") ?? 0);
+    return +params.get("page") ?? 0;
 }
 
 function getComic() {
