@@ -1,5 +1,9 @@
 main {
     flex-flow: column nowrap;
+
+    h1 {
+        margin-top: 0;
+    }
 }
 
 .catalog {
