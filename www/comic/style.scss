@@ -44,6 +44,12 @@ header img {
     background-position: center;
 }
 
+#previous,
+#next {
+    visibility: none;
+    cursor: default;
+}
+
 header,
 footer {
     opacity: 0.6;
