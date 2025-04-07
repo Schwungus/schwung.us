@@ -36,13 +36,16 @@ body {
 }
 
 body {
-    width: 100vw;
+    width: fit-content;
     min-height: 100vh;
-    padding: 12px 0;
+
+    padding: 16px 0;
+    margin: 0 auto;
 
     font-family: Stilu;
     font-size: 18px;
     line-height: 150%;
+    text-align: center;
 
     display: flex;
     flex-flow: column nowrap;
@@ -56,40 +59,43 @@ a {
     color: rgb(0, 64, 128);
 }
 
-header {
-    text-align: center;
-
-    img {
-        width: 40%;
-    }
+header img {
+    width: 360px;
 }
 
 main {
+    margin: 16px auto;
+
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
     gap: 1ch;
-    text-align: center;
 }
 
 #video {
-    width: 24vh;
+    width: 240px;
 }
 
 #links {
-    font-size: 32px;
+    width: fit-content;
     margin: 0 auto;
+
+    font-size: 32px;
 
     display: flex;
     flex-flow: row nowrap;
     gap: 1ch;
-
-    width: fit-content;
 }
 
 #copying {
     margin: 0 auto;
     margin-top: 1ex;
+
     font-size: 80%;
+}
+
+header,
+footer {
+    text-align: center;
 }
