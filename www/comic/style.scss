@@ -31,7 +31,7 @@ header img {
 #comic:fullscreen {
     #page,
     #page-container {
-        width: max-content;
+        width: auto;
         height: 100vh;
         aspect-ratio: 0.70695553; // magic number: 1240px / 1754px
         border-radius: 0;
@@ -52,47 +52,47 @@ header img {
     object-fit: contain;
     vertical-align: middle;
     cursor: pointer;
+}
 
-    &-container {
-        position: relative;
+#page-container {
+    position: relative;
 
-        width: 582px;
-        height: 823px;
+    width: 582px;
+    height: 823px;
 
-        overflow: hidden;
+    overflow: hidden;
 
-        flex-shrink: 0;
-        border-radius: 1em;
+    flex-shrink: 0;
+    border-radius: 1em;
 
-        background-color: white;
-        background-image: url("/assets/loading.gif");
-        background-repeat: no-repeat;
-        background-position: center;
+    background-color: white;
+    background-image: url("/assets/loading.gif");
+    background-repeat: no-repeat;
+    background-position: center;
 
-        &:hover #page-fullscreen {
-            visibility: visible;
-            cursor: pointer;
-        }
-
-        &:not(:hover) #page-fullscreen {
-            visibility: hidden;
-            cursor: default;
-        }
+    &:hover #page-fullscreen {
+        visibility: visible;
+        cursor: pointer;
     }
 
-    &-fullscreen {
-        position: absolute;
-        top: 0;
-        right: 0;
-
-        padding: 8px;
-
-        font-size: 8px;
-        color: white;
-        mix-blend-mode: difference;
-
-        z-index: 100;
+    &:not(:hover) #page-fullscreen {
+        visibility: hidden;
+        cursor: default;
     }
+}
+
+#page-fullscreen {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    padding: 8px;
+
+    font-size: 8px;
+    color: white;
+    mix-blend-mode: difference;
+
+    z-index: 100;
 }
 
 #previous,
