@@ -40,6 +40,28 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+document.addEventListener("keydown", (event) => {
+    if (event.defaultPrevented) {
+        return;
+    }
+
+    switch (event.key) {
+        case "ArrowLeft":
+            previousPage();
+            break;
+
+        case " ":
+        case "ArrowRight":
+            nextPage();
+            break;
+
+        default:
+            return;
+    }
+
+    event.preventDefault();
+});
+
 function getPageNum() {
     return +params.get("page") ?? 0;
 }
@@ -94,5 +116,17 @@ function setPage(page, force) {
         pageImg.style.cursor = "pointer";
         next.style.visibility = "visible";
         next.style.cursor = "pointer";
+    }
+}
+
+function toggleFullscreen() {
+    const comicBox = document.getElementById("comic");
+
+    if (document.fullscreenElement == comicBox) {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        }
+    } else if (comicBox.requestFullscreen) {
+        comicBox.requestFullscreen();
     }
 }
