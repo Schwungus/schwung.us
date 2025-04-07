@@ -25,26 +25,18 @@ header img {
         width: 100vw;
         height: 100vh;
         justify-content: center;
+    }
+}
 
-        #page {
-            width: 100%;
-            height: 100%;
+#comic:fullscreen {
+    #page,
+    #page-container {
+        height: 100vh;
+        aspect-ratio: 0.70695553; // magic number: 1240px / 1754px
+        border-radius: 0;
 
-            &-container {
-                /* MAGIC NUMBER: (1240/1920)*(1080/1754)
-                   Average screen is 1920x1080, comic pages are 1240x1754.
-
-                   I don't think this is good for portrait screens but it's
-                   necessary because otherwise this container will disappear
-                   and throw the arrow buttons around. */
-                width: 39.76624857468643vw;
-                height: 100vh;
-                border-radius: 0;
-            }
-
-            // nonk can decide whether or not buttons should be affected by
-            // zoom on fullscreen (the page isn't)
-        }
+        // nonk can decide whether or not buttons should be affected by
+        // zoom on fullscreen (the page isn't)
     }
 }
 
