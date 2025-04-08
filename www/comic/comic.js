@@ -5,39 +5,41 @@ let comicsUrl =
 let pagesUrl =
     "https://raw.githubusercontent.com/Schwungus/schwung.us/refs/heads/rework/www/comics/assets/";
 
-if (window.location.hostname in ["localhost", "127.0.0.1"]) {
+if (["localhost", "127.0.0.1", ""].includes(window.location.hostname)) {
     comicsUrl = "/comic/db.json";
     pagesUrl = "/comics/assets/";
 }
 
-fetch(comicsUrl)
-    .then((x) => x.json())
-    .then((x) => {
-        comics = x;
-    })
-    .then(startup);
-
 const params = new URLSearchParams(window.location.search);
 
 function startup() {
-    const previous = document.getElementById("previous");
-    const pageImg = document.getElementById("page");
-    const next = document.getElementById("next");
-
-    previous.addEventListener("click", previousPage);
-    pageImg.addEventListener("click", nextPage);
-    next.addEventListener("click", nextPage);
+    document.getElementById("previous").addEventListener("click", previousPage);
+    document.getElementById("page").addEventListener("click", nextPage);
+    document.getElementById("next").addEventListener("click", nextPage);
 
     setPage(getPageNum(), true);
 
-    const title = getComic().name;
-    document.title = `${title} | Schwungus Comics`;
+    let comic = getComic();
+
+    document.title = `${comic.name} | Schwungus Comics`;
+
+    if ("newgrounds" in comic) {
+        document
+            .getElementById("copying")
+            .insertAdjacentHTML(
+                "afterbegin",
+                `View on <a href="https://newgrounds.com/art/view/${comic.newgrounds}">Newgrounds</a>&nbsp;&nbsp;&#x2022;&nbsp;&nbsp;`
+            );
+    }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    if (comics != null) {
-        startup();
-    }
+    fetch(comicsUrl)
+        .then((x) => x.json())
+        .then((x) => {
+            comics = x;
+        })
+        .then(startup);
 });
 
 document.addEventListener("keydown", (event) => {
