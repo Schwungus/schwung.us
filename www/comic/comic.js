@@ -19,17 +19,23 @@ function startup() {
 
     setPage(getPageNum(), true);
 
-    let comic = getComic();
-
+    const comic = getComic();
     document.title = `${comic.name} | Schwungus Comics`;
 
     if ("newgrounds" in comic) {
-        document
-            .getElementById("copying")
-            .insertAdjacentHTML(
-                "afterbegin",
-                `View on <a href="https://newgrounds.com/art/view/${comic.newgrounds}">Newgrounds</a>&nbsp;&nbsp;&#x2022;&nbsp;&nbsp;`
-            );
+        const link = document.createElement("a");
+        link.href = `https://newgrounds.com/art/view/${comic.newgrounds}`;
+        link.textContent = "Newgrounds";
+
+        const viewOn = document.createElement("p");
+        viewOn.textContent = "View on ";
+        viewOn.className = "newgrounds";
+        viewOn.appendChild(link);
+        viewOn.appendChild(document.createTextNode("."));
+
+        const copying = document.getElementById("copying");
+        copying.appendChild(viewOn);
+        copying.appendChild(separator);
     }
 }
 

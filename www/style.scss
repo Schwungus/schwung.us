@@ -89,10 +89,18 @@ main {
 }
 
 #copying {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1ch;
+
     margin: 0 auto;
     margin-top: 1ex;
 
     font-size: 80%;
+
+    > p {
+        margin: 0;
+    }
 }
 
 header,
