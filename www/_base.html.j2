@@ -9,7 +9,8 @@
     <title>Schwungus | {% block title %}{% endblock title %}</title>
     <meta name="description" content="{% block description %}{% endblock description %}" />
 
-    <link rel="canonical" href="https://schwung.us{% block url %}{% endblock url %}" />
+    <link rel="canonical"
+        href="https://schwung.us{% if self.url() != '/404' %}{% block url %}{% endblock url %}{% endif %}" />
     <link rel="icon" type="image/png" href="/assets/favicon.png" />
     <link rel="stylesheet" href="/style.css" />
 
