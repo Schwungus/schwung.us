@@ -4,6 +4,7 @@
         "EditorConfig.EditorConfig",
         "WakaTime.vscode-wakatime",
         "wayou.vscode-todo-highlight",
-        "samuelcolvin.jinjahtml"
+        "samuelcolvin.jinjahtml",
+        "sumneko.lua"
     ]
 }

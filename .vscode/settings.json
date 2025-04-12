@@ -14,5 +14,8 @@
     },
     "[jinja-html]": {
         "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[lua]": {
+        "editor.defaultFormatter": "sumneko.lua"
     }
 }

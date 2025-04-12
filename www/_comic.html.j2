@@ -1,8 +1,8 @@
 {% extends "_base.html" %}
 
-{% block title %}Comic{% endblock title %}
-{% block description %}Comic Reader{% endblock description %}
-{% block url %}comic{% endblock url %}
+{% block title %}{{ title }}{% endblock title %}
+{% block description %}{{ description }}{% endblock description %}
+{% block url %}/comic/{{ id }}{% endblock url %}
 {% block logo %}/assets/logo_small_silhouette.png{% endblock logo %}
 
 {% block head %}
