@@ -10,6 +10,9 @@ if (["localhost", "127.0.0.1", ""].includes(window.location.hostname)) {
     pagesUrl = "/comics/assets/";
 }
 
+let url = window.location.href.replace(/\/$/, "").split("?")[0];
+
+const id = url.substring(url.lastIndexOf("/") + 1);
 const params = new URLSearchParams(window.location.search);
 
 function startup() {
@@ -35,7 +38,6 @@ function startup() {
 
         const copying = document.getElementById("copying");
         copying.appendChild(viewOn);
-        copying.appendChild(separator);
     }
 }
 
@@ -75,8 +77,7 @@ function getPageNum() {
 }
 
 function getComic() {
-    const id = params.get("id");
-    return comics[id in comics ? id : ""];
+    return comics[id in comics ? id : "404"];
 }
 
 function previousPage() {
@@ -95,7 +96,6 @@ function setPage(page, force) {
     const pageImg = document.getElementById("page");
     const next = document.getElementById("next");
 
-    const id = params.get("id");
     const comic = getComic();
 
     if (!force && getPageNum() == page) {
@@ -104,7 +104,11 @@ function setPage(page, force) {
 
     params.set("page", page);
 
-    window.history.pushState(null, "", "/comic?" + params.toString());
+    window.history.pushState(
+        null,
+        "",
+        "/comic/" + id + "?" + params.toString()
+    );
     pageImg.src = "";
     pageImg.src = `${pagesUrl}${id}/${page}.png`;
 
