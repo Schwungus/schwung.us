@@ -3,7 +3,7 @@ local db = json("comic/db.json");
 for id, comic in pairs(db) do
     local outpath = "comic/" .. id .. "/index.html";
 
-    render("_comic.html", outpath, {
+    render("comic/_comic.html", outpath, {
         id = id,
         title = comic.name,
         description = comic.description,
