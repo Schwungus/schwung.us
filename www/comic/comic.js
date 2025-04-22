@@ -10,9 +10,12 @@ if (["localhost", "127.0.0.1", ""].includes(window.location.hostname)) {
     pagesUrl = "/comics/assets/";
 }
 
-let url = window.location.href.replace(/\/$/, "").split("?")[0];
+let url = (window.location.origin + window.location.pathname).replace(
+    /\/+$/,
+    ""
+);
+let id = url.split("/").pop();
 
-const id = url.substring(url.lastIndexOf("/") + 1);
 const params = new URLSearchParams(window.location.search);
 
 function startup() {
