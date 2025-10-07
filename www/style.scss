@@ -3,6 +3,10 @@
     src: url("/assets/Stilu-Regular.otf") format("opentype");
 }
 
+:root {
+    color-scheme: only light;
+}
+
 // from nonk to cantsleep:
 //   the people who wrote the CSS specs regret making the decisions that led to this boilerplate
 
