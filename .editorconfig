@@ -9,3 +9,6 @@ indent_style = space
 
 [*.{lua,html,j2,css,scss,js,json}]
 indent_size = 4
+
+[*.yml]
+indent_size = 2
