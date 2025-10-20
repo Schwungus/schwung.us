@@ -4,10 +4,59 @@
         "pages": 1
     },
 
-    "sfusion-1": {
-        "name": "S-Fusion Prologue Ch. 1",
-        "description": "Force and Finesse - Hunk and Junktroop are about to witness the Wishing Well's second eruption.",
-        "newgrounds": "localinsomniac/sfusion-prologue-ch-1",
-        "pages": 7
+    "sfusion-hunk": {
+        "name": "S-Fusion Prologue: Hunk",
+        "description": "The alien warrior \"Hunk Quest\" crashes on Earth to find a way to save his planet. He unknowingly garners quite a bit of trouble during his search for comrades.",
+        "newgrounds": "localinsomniac/sfusion-prologue-hunk",
+        "pages": 1
+    },
+
+    "sfusion-junktroop": {
+        "name": "S-Fusion Prologue: Junktroop",
+        "description": "The badlands of western Dollop is home to a strange woman who wears a bucket, known by most as the bounty hunter \"Junktroop\". Her money's running low, and there's word of that huge bounty on someone named \"Hunk\"...",
+        "newgrounds": "localinsomniac/sfusion-prologue-junktroop",
+        "pages": 0
+    },
+
+    "sfusion-allyn": {
+        "name": "S-Fusion Prologue: Allyn",
+        "description": "Young teenager Allyn Powers is burdened with her sense of duty. After snatching the Power Gloves of her missing father and fleeing, she vows to prove that she has what it takes to wield them.",
+        "newgrounds": "localinsomniac/sfusion-prologue-allyn",
+        "pages": 0
+    },
+
+    "sfusion-platinum": {
+        "name": "S-Fusion Prologue: Platinum",
+        "description": "",
+        "newgrounds": "localinsomniac/sfusion-prologue-platinum",
+        "pages": 0
+    },
+
+    "sfusion-burge": {
+        "name": "S-Fusion Prologue: Burge",
+        "description": "",
+        "newgrounds": "localinsomniac/sfusion-prologue-burge",
+        "pages": 0
+    },
+
+    "sfusion-decay": {
+        "name": "S-Fusion Prologue: Decay",
+        "description": "Many ancient forest folk have fallen to a strong illness. As one of the last few remaining descendants and with his friend Marisa's life on the line, Decay has one shot to make things right.",
+        "newgrounds": "localinsomniac/sfusion-prologue-decay",
+        "pages": 0
+    },
+
+    "sfusion-ainz": {
+        "name": "S-Fusion Prologue: Ainz",
+        "description": "Ainz is in constant turmoil as he alternates between his chiropractic job and his secret identity as a nocturnal superhero to pay the bills. To make matters worse, he is also being hunted by the guardian spirit Sasayaku due to his cursed lineage.",
+        "newgrounds": "localinsomniac/sfusion-prologue-ainz",
+        "pages": 0
+    },
+
+    "sfusion-sasayaku": {
+        "name": "S-Fusion Prologue: Sasayaku",
+        "description": "There used to be a prosperous empire in eastern Dollop. Sasayaku, one of its elite warriors, nearly succumbs in a devastating attack but is reincarnated as a guardian spirit many centuries later.",
+        "newgrounds": "localinsomniac/sfusion-prologue-sasayaku",
+        "pages": 0
     }
 }
