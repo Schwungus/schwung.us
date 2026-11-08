@@ -2,15 +2,17 @@
     "editor.formatOnSave": true,
     "editor.formatOnSaveMode": "file",
     "prettier.useEditorConfig": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "Lua.workspace.library": [
+        "_sanity.lua"
+    ],
     "[css]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "vscode.css-language-features"
     },
     "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "vscode.html-language-features"
     },
     "[scss]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "vscode.css-language-features"
     },
     "[jinja-html]": {
         "editor.defaultFormatter": "vscode.html-language-features"

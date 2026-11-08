@@ -6,11 +6,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Schwungus | {% block title -%}{%- endblock title -%}</title>
-    <meta name="description" content="{%- block description -%}{%- endblock description -%}" />
+    <title>Schwungus | {% block title required -%}{%- endblock title -%}</title>
+    <meta name="description" content="{%- block description required -%}{%- endblock description -%}" />
 
-    <link rel="canonical"
-        href="https://schwung.us{% if self.url() != '/404' %}{%- block url -%}{%- endblock url -%}{% endif %}" />
+    {% if self.url() != '/404' %}
+    <link rel="canonical" href="https://schwung.us{%- block url required -%}{%- endblock url -%}" />
+    {% endif %}
+
     <link rel="icon" type="image/png" href="/assets/favicon.png" />
     <link rel="stylesheet" href="/style.css" />
 
@@ -44,7 +46,7 @@
     </header>
 
     <main>
-        {% block content %}{% endblock content %}
+        {% block content required %}{% endblock content %}
     </main>
 
     <footer>
@@ -56,7 +58,11 @@
         {% endblock links %}
 
         <section id="copying">
-            <p>&copy; 2025 <a href="https://github.com/Schwungus">Schwungus</a>.</p>
+            <p>
+                &copy;
+                <script>document.currentScript.replaceWith(new Date().getFullYear())</script>
+                <a href="https://github.com/Schwungus">Schwungus</a>.
+            </p>
             <p>All rights reserved.</p>
         </section>
     </footer>

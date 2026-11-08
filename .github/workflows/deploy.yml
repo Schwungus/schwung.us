@@ -3,7 +3,10 @@ name: Deploy to GitHub Pages
 on:
   workflow_dispatch:
   push:
-    branches: [ rework ]
+    branches: [rework]
+    paths:
+      - .github/workflows/deploy.yml
+      - www/**
 
 concurrency:
   group: pages
@@ -12,17 +15,21 @@ concurrency:
 jobs:
   publish:
     name: Render & publish
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
+
     environment:
       name: github-pages
       url: ${{ steps.publish.outputs.page_url }}
+
     permissions:
       contents: read
       pages: write
       id-token: write
+
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
+
       - name: Publish
         id: publish
         uses: nonk123/sanity-action@master
