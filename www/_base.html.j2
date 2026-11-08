@@ -3,28 +3,30 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Schwungus | {% block title required -%}{%- endblock title -%}</title>
-    <meta name="description" content="{%- block description required -%}{%- endblock description -%}" />
+    <title>Schwungus | {% block title required -%}{%- endblock title %}</title>
+    <meta name="description" content="{% block description required -%}{%- endblock description %}">
 
-    {% if self.url() != '/404' %}
-    <link rel="canonical" href="https://schwung.us{%- block url required -%}{%- endblock url -%}" />
+    {% if self.url() != "/404" %}
+    <link rel="canonical" href="https://schwung.us{%- block url required -%}{%- endblock url -%}">
+    <meta property="og:title" content="{{ self.title() }}">
+    <meta property="og:description" content="{{ self.description() }}">
+    <meta property="og:image" content="https://schwung.us/assets/logo_small.png">
+    <meta property="og:url" content="https://schwung.us{{ self.url() }}">
+    <meta property="og:site_name" content="Schwungus">
+    <meta property="og:type" content="{%- block og_type -%}profile{%- endblock og_type -%}">
     {% endif %}
 
-    <link rel="icon" type="image/png" href="/assets/favicon.png" />
-    <link rel="stylesheet" href="/style.css{{ nocache }}" />
+    <link rel="icon" type="image/png" href="/assets/favicon.png">
+    <link rel="stylesheet" href="/style.css{{ nocache }}">
 
-    <meta http-equiv="Content-Language" content="en" />
-    <meta name="robots" content="index, follow" />
-
-    <meta property="og:title" content="{{ self.title() }}" />
-    <meta property="og:description" content="{{ self.description() }}" />
-    <meta property="og:image" content="https://schwung.us/assets/logo_small.png" />
-    <meta property="og:url" content="https://schwung.us{{ self.url() }}" />
-    <meta property="og:site_name" content="Schwungus" />
-    <meta property="og:type" content="{%- block og_type -%}profile{%- endblock og_type -%}" />
+    {% if self.url() == "/404" %}
+    <meta name="robots" content="noindex, nofollow">
+    {% else %}
+    <meta name="robots" content="index, follow">
+    {% endif %}
 
     {% block head -%}{%- endblock head %}
 
@@ -41,21 +43,21 @@
 
     <header>
         <a href="/">
-            <img src="{% block logo -%}/assets/logo_silhouette.png{%- endblock logo %}" alt="Logo" />
+            <img src="{% block logo -%}/assets/logo_silhouette.png{%- endblock logo %}" alt="Logo">
         </a>
     </header>
 
     <main>
-        {% block content required %}{% endblock content %}
+        {% block content required -%}{%- endblock content %}
     </main>
 
     <footer>
-        {% block links %}
+        {% block links -%}
         <section id="links">
             <a href="mailto:contact@schwung.us" title="Email"><i class="fa fa-envelope"></i></a>
             <a href="https://github.com/Schwungus" title="GitHub"><i class="fa-brands fa-github"></i></a>
         </section>
-        {% endblock links %}
+        {%- endblock links %}
 
         <section id="copying">
             <p>
